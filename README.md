@@ -1,8 +1,8 @@
 1. Cambiar a tu rama de trabajo:
-git checkout nombre-de-tu-rama
+  it checkout nombre-de-tu-rama (sus apellidos)
 
 2. Traer los últimos cambios de la rama main antes de empezar:
-git pull origin main
+  git pull origin main
 
 3. Realizar tu trabajo en la rama.
 
