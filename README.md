@@ -1,15 +1,18 @@
-##Primero inicia tu rama 
-git checkout nombre-de-tu-rama (sus apellidos)
+1. Cambiar a tu rama de trabajo:
+git checkout nombre-de-tu-rama
 
-Antes de empezar a trabajar, haz un git pull para traer los últimos cambios
-
+2. Traer los últimos cambios de la rama main antes de empezar:
 git pull origin main
 
-Una vez que termines tu trabajo en tu rama, asegúrate de hacer  merge de la rama  main
+3. Realizar tu trabajo en la rama.
 
-git fetch origin
+4. Traer los cambios más recientes antes de hacer un merge (esto asegura que estás al día con lo último de main):
+  git fetch origin
 
-git push origin mi-rama
+5. Hacer el merge de la rama main en tu rama de trabajo:
+  git merge origin/main
 
+6. Subir tus cambios a tu rama en el repositorio remoto:
+  git push origin nombre-de-tu-rama
 
-suerte, Holm
+Suerte, Holm
