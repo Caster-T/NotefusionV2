@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: whitesmoke;
+  }
+  
+  .nav {
+    background-color:  #030099;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-bottom: 10vh;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: space-between; /* Distribute items across the available space */
+    flex: 1;
+    margin-left: 2rem; /* Adjust the left margin to create some space between the title and nav items */
+  }
+  
+  .nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Increase the gap to add more spacing between items */
+    width: 100%; /* Ensure the ul takes up the full width of the nav-items container */
+    justify-content: flex-end; /* Align the items to the right */
+  }
+  
+  .nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+    font-size: larger;
+  }
+  
+  .nav li.active {
+    background-color: #555;
+  }
+  
+  .nav li:hover {
+    background-color: #777;
+  }
+
+#login {
+    background-color: white; /* Fondo blanco para destacar */
+    color: #9B28A3; /* Color púrpura del texto */
+    border: 2px solid #9B28A3;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+#login:hover {
+    background-color: #9B28A3; /* Fondo púrpura al pasar el mouse */
+    color: white; /* Texto blanco al pasar el mouse */
+  }
+
+.contenedor {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 25px;
+
+  /*Grid*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid black;
+}
+.contenedor h3{
+  text-decoration: underline;
+}
+/* .contenedor div{
+  
+}  */
+
+.element1 {
+  background-color: seagreen;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.element2 {
+  background-color: deeppink;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.element3 {
+  background-color: violet;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.element4 {
+  background-color: tomato;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.element5{
+  background-color: darkorange;
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+
+#listaAboutUs li{
+  
+  margin: 2%;
+  list-style-type: upper-roman;
+}
+#listaAboutUs li::marker {
+  font-size: 20px;
+  font-style: italic;
+}
+.pA{
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contenedorSingUp{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  font-size: 20px;
+  margin-top: 25px;
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 50vw;
+  text-align: left;
+}
+.contenedorSingUp div{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#Nombre{
+  background-color: darkorange;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#CorreoElectronico{
+  background-color: goldenrod;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#Password{
+  background-color: forestgreen;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+#ReCheckPassword{
+  background-color: dodgerblue;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#Registrarse{
+  text-align: center;
+  background-color: tomato;
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+#Registrarse input {
+  background-color: white;
+  color: #9B28A3;
+  border: 2px solid #9B28A3;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#Registrarse input:hover{
+  background-color: #9B28A3;
+  color: white;
+}
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: #9B28A3;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+/* .contenedorSingUp input{
+  
+} */
