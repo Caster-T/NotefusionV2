@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-
-function App() {
-
-  return (
-L
-=======
 import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from './ComponentsApp/Home';
@@ -30,7 +22,6 @@ function App() {
         <Route path="/Registrar" element={<Registrar />} />
       </Routes>
     </div>
->>>>>>> main
   );
 }
 
