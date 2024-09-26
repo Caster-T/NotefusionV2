@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import './estilos/index.css';
-import reportWebVitals from './reportWebVitals';
-import "./estilos/styles.css";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
