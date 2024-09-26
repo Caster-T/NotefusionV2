@@ -1,4 +1,7 @@
 # Como actualizar tu rama.
+0) Antes de todo, este es el comando para saber donde estas (Ya sea en tu rama, main u otro lugar):
+
+      git branch
 
 1) Tenes que estar en tu main.
    El comando para ir a tu main es:
