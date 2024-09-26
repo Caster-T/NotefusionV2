@@ -1,23 +1,41 @@
-1. Cambiar a tu rama de trabajo:
+# Como actualizar tu rama.
 
-git checkout nombre-de-tu-rama (sus apellidos)
+1) Tenes que estar en tu main.
+   El comando para ir a tu main es:
+   git checkout main
 
-3. Traer los últimos cambios de la rama main antes de empezar:
+2) Una ves puesto el comando anterior, tenes que ir a tu branch.El comando es:
+   git checkout (tu apellido, primera letra en mayuscula)
+ej:   git checkout Holm
 
-git pull origin main
+3) Una vez estando en tu rama, pone el sig. comando:
+   git merge main
 
-5. Realizar tu trabajo en la rama.
+Listo, no seas bot y siempre trabaja en tu rama. Con amor❤️ Eze.
 
-6. Traer los cambios más recientes antes de hacer un merge (esto asegura que estás al día con lo último de main):
- 
-  git fetch origin
+# Como actualizar el main con tu rama/branch.
 
-7. Hacer el merge de la rama main en tu rama de trabajo:
- 
-  git merge origin/main
+1)Estando en tu rama, tenes que ir al main, siempre que quieras actualizarlo.
+  git checkout main
 
-8. Subir tus cambios a tu rama en el repositorio remoto:
+2)Luego pones el sig. comando:
 
-git push origin nombre-de-tu-rama
+  git merge (tu rama).
 
-Suerte, Holm
+3)Luego guardas los cambios como siempre.
+
+Listo, no seas bot y siempre trabaja en tu rama. Con amor❤️ Eze.
+
+# Comandos npm 
+
+npm install (instala todos los modulos y es obligatorio ejecutar dicho comando cada vez que cambies entre main y alguna rama).
+
+npm start (se usa para ejecutar y ver la pagina en tu buscador de preferencia [si usas opera o brave sos gay]).
+
+npm cache clean  (Limpia la caché de NPM).
+
+npm i bootstrapp (en caso de que haya algun codigo con el caprichoso bootstrapp hay que usar este comando).
+
+Listo, no seas bot y siempre trabaja en tu rama. Con amor❤️ Eze.
+
+PD:🍆🍑
