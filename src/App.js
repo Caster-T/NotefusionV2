@@ -1,29 +1,20 @@
-import React, { useState } from 'react';
-import NavBar from './componentes/Navbar';
-import LoginModal from './componentes/LoginModal';
-import './estilos/App.css';
+import React from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
+import Home from './ComponentsApp/Home';
+import Canvas from './ComponentsApp/canvas';
 
 function App() {
-  const [buttonPopup, setButtonPopup] = useState(false);
-
   return (
-    <div className="App">
-      <NavBar 
-        openPopup={() => setButtonPopup(true)} 
-      />
+    <div style={{ padding: '20px' }}>
+      <nav>
+        <Link to="/" style={{ marginRight: '10px' }}>Home</Link>
+        <Link to="/Canvas">Canvas</Link>
+      </nav>
 
-      <section className="contenedor">
-        {"hola"}
-        <div className="element1">
-          <h3>About Us</h3>
-          {/* Contenido aquí */}
-        </div>
-      </section>
-
-      <LoginModal 
-        buttonPopup={buttonPopup} 
-        setButtonPopup={setButtonPopup} 
-      />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Canvas" element={<Canvas />} />
+      </Routes>
     </div>
   );
 }
