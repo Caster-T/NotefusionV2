@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CustomizationPanel({ section, updateSection }) {
+function Customizable({ section, updateSection }) {
   return (
     <div style={{ marginTop: '10px' }}>
       <h4>Customize Section</h4>
@@ -31,4 +31,4 @@ function CustomizationPanel({ section, updateSection }) {
   );
 }
 
-export default CustomizationPanel;
+export default Customizable;

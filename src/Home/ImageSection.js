@@ -1,11 +1,9 @@
 import React from 'react';
-import myImage from '../assets/imagen1.webp'; // Asegúrate de que la ruta sea correcta
+import myImage from '../assets/imagen1.png';
 
 const ImageSection = () => {
   return (
-    <div>
-      <img src={myImage} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />
-    </div>
+    <img src={myImage} alt="Descripción de la imagen" style={{ width: '100%', height: 'auto' }} />
   );
 };
 
