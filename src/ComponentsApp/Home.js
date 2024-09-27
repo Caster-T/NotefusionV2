@@ -4,6 +4,9 @@ import ImageSection from "../Home/ImageSection";
 import ButtonGroup from "../Home/ButtonGroup";
 import "../Home/HomeCss/Home.css";
 import Footer from "../Home/Footer";
+import Seccion from "../Home/Seccion";
+import image1 from "../assets/PLACEHOLDER1.png";
+import image2 from "../assets/PLACEHOLDER2.png";
 
 const Home = () => {
   return (
@@ -13,12 +16,33 @@ const Home = () => {
           <ImageSection />
         </div>
         <div className="text-content">
-          <Header />
+          <Header title={"Organiza tus tareas con Notefusion"} />
           <ButtonGroup />
         </div>
       </div>
-      
-      
+      <div>
+      <Header title={"Hazlo a tu estilo"} />
+        <Seccion
+          imagen={image1}
+          texto="Crear y personalizar roadmaps que muestren los hitos y fases clave de tu proyecto, ajustando el flujo de trabajo según tus necesidades."
+          invertido={true}
+        />
+        <Seccion
+          imagen={image2}
+          texto="Organizar tareas en tableros visuales que se pueden dividir en fases, categorías o prioridades, y mover fácilmente las tareas entre las diferentes etapas del proyecto."
+          invertido={false}
+        />
+        <Seccion
+          imagen={image1}
+          texto="Gestionar equipos y colaborar en tiempo real, asignando tareas, agregando descripciones, comentarios y compartiendo archivos de manera eficiente."
+          invertido={true}
+        />
+        <Seccion
+          imagen={image2}
+          texto="Automatizar flujos de trabajo para optimizar la productividad, integrando herramientas externas y configurando reglas automáticas que te ahorran tiempo."
+          invertido={false}
+        />
+      </div>
       <footer className="footer">
         <Footer />
       </footer>
