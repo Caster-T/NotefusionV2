@@ -3,7 +3,7 @@ import Header from "../Home/Header";
 import ImageSection from "../Home/ImageSection";
 import ButtonGroup from "../Home/ButtonGroup";
 import "../Home/HomeCss/Home.css";
-import Footer from "../Home/Footer";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -17,7 +17,6 @@ const Home = () => {
           <ButtonGroup />
         </div>
       </div>
-
       <footer className="footer">
         <Footer />
       </footer>
