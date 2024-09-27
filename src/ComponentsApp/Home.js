@@ -17,8 +17,7 @@ const Home = () => {
           <ButtonGroup />
         </div>
       </div>
-      
-      
+
       <footer className="footer">
         <Footer />
       </footer>
