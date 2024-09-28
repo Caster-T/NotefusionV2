@@ -1,14 +1,31 @@
 import React from "react";
-import "../Home/HomeCss/Home.css";
-import { Link } from 'react-router-dom';
-
+import "../estilosApp/footer.css";
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
-  return <div className="ContenedorFlex">
-    <Link to ="/"><button className="HijoFlex" id="FooterInicio">Inicio</button></Link>
-    <Link to ="/TerminosYCondiciones"><button className="HijoFlex">Terminos</button></Link> 
-    <div className="HijoFlex">Copyright © 2024</div>
-  </div>
+  const location = useLocation(); // Obtiene la ubicación actual
+
+  return (
+    <div className="ContenedorFlex">
+      {location.pathname !== "/" && (
+        <Link to="/">
+          <button className="HijoFlex">Inicio</button>
+        </Link>
+      )}
+      {location.pathname !== "/AboutUs" && (
+      <Link to="/AboutUs">
+      <button className="HijoFlex">About Us</button>
+      </Link>
+      )}
+      {location.pathname !== "/TerminosYCondiciones" && (
+      <Link to="/TerminosYCondiciones">
+      <button className="HijoFlex">Terminos y condiciones</button>
+    </Link>
+      )}
+
+      <div className="HijoFlex">Copyright © 2024</div>
+    </div>
+  );
 };
 
 export default Footer;

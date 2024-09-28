@@ -5,7 +5,9 @@ import Canvas from './ComponentsApp/canvas';
 import Registrar from './ComponentsApp/Registrar';
 import Login from './ComponentsApp/login';
 import TermYCond from './ComponentsApp/TermYCond';
+import AboutUs from './ComponentsApp/AboutUs'
 import NotFound from './ComponentsApp/NotFound';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Registrar" element={<Registrar />} />
         <Route path="/TerminosYCondiciones" element={<TermYCond />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
