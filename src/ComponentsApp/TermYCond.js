@@ -7,7 +7,7 @@ function TermYCond() {
   const navigate = useNavigate(); // Inicializa useNavigate
 
   const handleNavigation = () => {
-    navigate("/ruta"); // Reemplaza '/ruta' con la ruta a la que deseas navegar
+    navigate("/"); // Reemplaza '/ruta' con la ruta a la que deseas navegar
   };
   return (
     <div>

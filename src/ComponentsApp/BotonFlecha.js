@@ -6,7 +6,7 @@ const BotonFlecha = () => {
   const navigate = useNavigate(); // Hook para la navegación
 
   const handleClick = () => {
-    navigate('/home'); // Redirige a /home
+    navigate('/');
   };
 
   return (
