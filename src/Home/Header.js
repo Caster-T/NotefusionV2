@@ -5,7 +5,7 @@ const header = ({title, subtitle,paragraph}) => {
     <div className="header">
       <h1 className='title'>{title}</h1>
       <h2 className='subtitle'>{subtitle}</h2>  
-      <p className='Paragraph'>{paragraph}</p>  
+      <p className='paragraph'>{paragraph}</p>  
     </div>
   );
 };

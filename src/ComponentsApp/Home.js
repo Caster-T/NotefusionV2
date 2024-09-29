@@ -34,6 +34,9 @@ const Home = () => {
             </>
           )}
         />
+
+        <Header  paragraph={"Transforma tu proyecto: Añade tu estilo único y deja que la creatividad te guíe en cada detalle"}/>
+
         <Seccion
           imagen={image}
           texto="Crear y personalizar roadmaps que muestren los hitos y fases clave de tu proyecto, ajustando el flujo de trabajo según tus necesidades."

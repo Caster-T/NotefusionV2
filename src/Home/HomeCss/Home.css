@@ -59,6 +59,13 @@
   display: block; /* Cada parte en una nueva línea */
 }
 
+.paragraph{
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: #222;
+  text-align: center;
+  line-height: 1.2;
+}
 
 /* Responsive */
 

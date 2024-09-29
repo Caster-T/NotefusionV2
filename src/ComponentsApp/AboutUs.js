@@ -11,6 +11,7 @@ function Canvas() {
         <ul>
             <li>Holm</li>
             <li>Chavez</li>
+            <li>Perez Venturo</li>
             <li>Grizzi</li>
             <li>Binder</li>
         </ul>
