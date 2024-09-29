@@ -1,16 +1,15 @@
 import React from "react";
-import Header from "../Home/Header"; // Cambié a mayúscula para seguir la convención de nombres
+import Header from "../Home/Header";
 import ImageSection from "../Home/ImageSection";
 import ButtonGroup from "../Home/ButtonGroup";
+import "../Home/HomeCss/Home.css";
 import Footer from "./Footer";
 import Seccion from "../Home/Seccion";
 import image from "../assets/placeholdeer.png";
-
-import "../Home/HomeCss/Home.css";
-
 const Home = () => {
+
   return (
-    <div className="HomeBody">
+    <>
       <div className="grid-container">
         <div className="image">
           <ImageSection />
@@ -21,8 +20,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="contenedorSeccion">
-        <Header subtitle={"Hazlo a tu estilo"} />
+      <div>
+        <Header title={"Hazlo a tu estilo"} />
         <Seccion
           imagen={image}
           texto="Crear y personalizar roadmaps que muestren los hitos y fases clave de tu proyecto, ajustando el flujo de trabajo según tus necesidades."
@@ -44,11 +43,11 @@ const Home = () => {
           invertido={false}
         />
       </div>
-      
+
       <footer className="footer">
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 

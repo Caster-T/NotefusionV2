@@ -7,6 +7,7 @@ import Login from './ComponentsApp/login';
 import TermYCond from './ComponentsApp/TermYCond';
 import AboutUs from './ComponentsApp/AboutUs'
 import NotFound from './ComponentsApp/NotFound';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 function App() {
