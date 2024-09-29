@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./Footer";
-import BotonFlecha from "./BotonFlecha";
+import Footer from "./CompRepetitivos/Footer";
+import BotonFlecha from "./CompRepetitivos/BotonFlecha";
 import { useNavigate } from "react-router-dom";
 
 function TermYCond() {
@@ -12,7 +12,6 @@ function TermYCond() {
   return (
     <div>
       <section class="py-5 bg-light">
-        {/* Texto de Terminos y Condiciones */}
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10">

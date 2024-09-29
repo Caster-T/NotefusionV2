@@ -1,32 +1,92 @@
-.contenedorSeccion{
-  border: 1px solid black;
+.contenedorComponenteSeccion {
+  border: 1px solid rgb(255, 255, 255);
   width: 70%;
   margin: 0 auto;
 }
+
 .seccion {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.SeccionMarco {
+  border: 3px solid black;
+  border-radius: 30px;
+}
+
+.seccionImagen {
+  padding: 20px;
+}
+
+.seccionImagen img {
+  width: 350px;
+  height: 300px; 
+  object-fit: cover; 
+}
+
+.seccionTexto p {
+  flex: 2;
+  padding: 50px; 
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.seccion-invertida {
+  flex-direction: row-reverse;
+}
+
+.seccion-texto p {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .contenedorComponenteSeccion {
+    width: 90%;
   }
-  
+
+  .seccion {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
   .seccion img {
-    border: 1px solid red;
-    width: 300px;
-    height: 300px;
+    width: 250px; /* Tamaño fijo para pantallas más pequeñas */
+    height: 200px; /* Tamaño fijo para pantallas más pequeñas */
+    object-fit: cover; /* Mantiene la proporción */
   }
-  
+
   .seccion p {
-    flex: 2;
-    padding: 0 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .seccion-texto p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedorComponenteSeccion {
+    width: 100%;
+  }
+
+  .seccion img {
+    width: 200px; 
+    height: 150px; 
+    object-fit: cover; 
+  }
+
+  .seccion p {
     font-size: 1rem;
+    padding: 5px;
   }
-  
-  /* Estilo para cuando la sección esté invertida (imagen a la izquierda) */
-  .seccion-invertida {
-    flex-direction: row-reverse;
-  }  
-  .seccion-texto p{
-    font-size: 1.5rem;
+
+  .seccion-texto p {
+    font-size: 1.2rem;
   }
+}
