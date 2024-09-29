@@ -9,6 +9,17 @@
     background-color: #0b1320;
   }
   
+  .NoteFusion{
+    margin-bottom: 4px;
+    color: white;
+    padding: 20px;
+    font-size: 1.08rem;
+    text-decoration: none;
+    background-color: #0b1320;
+    border: none;
+    font-weight: 700;
+  }
+
   .HijoFlex {
     margin-bottom: 4px;
     color: white;

@@ -1,15 +1,20 @@
-import React from "react";
-import Header from "../Home/Header";
+import React from "react"
+import NavBar from "./CompRepetitivos/Navbar";// creacion de Navbar
+import Header from "../Home/Header"; // Cambié a mayúscula para seguir la convención de nombres
 import ImageSection from "../Home/ImageSection";
 import ButtonGroup from "../Home/ButtonGroup";
-import "../Home/HomeCss/Home.css";
-import Footer from "./Footer";
+import Footer from "./CompRepetitivos/Footer";
 import Seccion from "../Home/Seccion";
 import image from "../assets/placeholdeer.png";
-const Home = () => {
+import "../Home/HomeCss/Home.css";
 
-  return (
+const Home = () => {
+  return(
     <>
+      <nav>
+        <NavBar />
+      </nav>
+
       <div className="grid-container">
         <div className="image">
           <ImageSection />
@@ -21,7 +26,7 @@ const Home = () => {
       </div>
 
       <div>
-        <Header title={"Hazlo a tu estilo"} />
+        <Header subtitle={"Hazlo a tu estilo"} />
         <Seccion
           imagen={image}
           texto="Crear y personalizar roadmaps que muestren los hitos y fases clave de tu proyecto, ajustando el flujo de trabajo según tus necesidades."
@@ -49,6 +54,5 @@ const Home = () => {
       </footer>
     </>
   );
-};
-
+}
 export default Home;

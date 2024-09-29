@@ -1,6 +1,4 @@
-/* .HomeBody {
-  background: linear-gradient(to bottom, #ffffff, #ffffff, #e5e4e4); 
-} */
+
 
 .grid-container {
   margin-top: 10vh;
@@ -47,9 +45,11 @@
 }
 
 .subtitle {
-  font-size: 3rem;
+
+  font-size: 4rem;
   margin-left: 15%;
   font-weight:700 ;
+  margin-top: 8%;
 }
 
 
