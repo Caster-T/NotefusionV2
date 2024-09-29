@@ -11,7 +11,7 @@ class NavBar extends React.Component {
             <li><a href="/">Inicio</a></li>
             <li><a href="/AboutUs">About Us</a></li>
             <li><a href="/login" id="login">Iniciar Sesión</a></li>
-            <li><a href="/register">Registrarse</a></li>
+            <li><a href="/Registrar">Registrarse</a></li>
           </ul>
         </div>
       </nav>

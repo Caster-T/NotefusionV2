@@ -25,7 +25,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
+      <div className="SeccionContainer">
         <Header subtitle={"Hazlo a tu estilo"} />
         <Seccion
           imagen={image}

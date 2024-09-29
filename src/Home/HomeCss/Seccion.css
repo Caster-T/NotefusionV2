@@ -1,92 +1,75 @@
 .contenedorComponenteSeccion {
-  border: 1px solid rgb(255, 255, 255);
-  width: 70%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0 20px;
 }
 
 .seccion {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin: 20px 0;
-  padding: 20px;
-}
-
-.SeccionMarco {
-  border: 3px solid black;
-  border-radius: 30px;
-}
-
-.seccionImagen {
-  padding: 20px;
-}
-
-.seccionImagen img {
-  width: 350px;
-  height: 300px; 
-  object-fit: cover; 
-}
-
-.seccionTexto p {
-  flex: 2;
-  padding: 50px; 
-  font-size: 1.5rem;
-  font-weight: 650;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .seccion-invertida {
   flex-direction: row-reverse;
 }
 
-.seccion-texto p {
+.SeccionMarco {
+  width: 50%;
+}
+
+.seccionImagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.seccionTexto {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.seccionTexto p {
   font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Responsive */
+.seccion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-@media (max-width: 1200px) {
-  .contenedorComponenteSeccion {
-    width: 90%;
-  }
-
+@media (max-width: 768px) {
   .seccion {
-    flex-direction: column; 
-    text-align: center; 
+    flex-direction: column;
   }
 
-  .seccion img {
-    width: 250px; /* Tamaño fijo para pantallas más pequeñas */
-    height: 200px; /* Tamaño fijo para pantallas más pequeñas */
-    object-fit: cover; /* Mantiene la proporción */
-  }
-
-  .seccion p {
-    font-size: 1.2rem;
-    padding: 10px;
-  }
-
-  .seccion-texto p {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contenedorComponenteSeccion {
+  .SeccionMarco,
+  .seccionTexto {
     width: 100%;
   }
 
-  .seccion img {
-    width: 200px; 
-    height: 150px; 
-    object-fit: cover; 
+  .seccionImagen img {
+    width: 100%;
+    height: auto;
   }
 
-  .seccion p {
-    font-size: 1rem;
-    padding: 5px;
-  }
-
-  .seccion-texto p {
-    font-size: 1.2rem;
+  .seccion-invertida {
+    flex-direction: column;
   }
 }
