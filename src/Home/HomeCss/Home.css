@@ -47,11 +47,16 @@
 
 
 .subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin: 2% auto;
+  line-height: 1.2;
+}
 
-  font-size: 4rem;
-  margin-left: 15%;
-  font-weight:700 ;
-  margin-top: 8%;
+.subtitle span {
+  display: block; /* Cada parte en una nueva línea */
 }
 
 
