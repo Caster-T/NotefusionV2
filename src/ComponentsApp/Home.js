@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../Home/Navbar";
 import Header from "../Home/Header"; // Cambié a mayúscula para seguir la convención de nombres
 import ImageSection from "../Home/ImageSection";
 import ButtonGroup from "../Home/ButtonGroup";
@@ -11,6 +12,9 @@ import "../Home/HomeCss/Home.css";
 const Home = () => {
   return (
     <div className="HomeBody">
+      <nav>
+        <NavBar />
+      </nav>
       <div className="grid-container">
         <div className="image">
           <ImageSection />
