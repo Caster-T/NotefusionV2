@@ -8,8 +8,8 @@ import Seccion from "../Home/Seccion";
 import image1 from "../assets/PLACEHOLDER1.png";
 import image2 from "../assets/PLACEHOLDER2.png";
 
-
 const Home = () => {
+
   return (
     <>
       <div className="grid-container">
@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       <div>
-      <Header title={"Hazlo a tu estilo"} />
+        <Header title={"Hazlo a tu estilo"} />
         <Seccion
           imagen={image1}
           texto="Crear y personalizar roadmaps que muestren los hitos y fases clave de tu proyecto, ajustando el flujo de trabajo según tus necesidades."

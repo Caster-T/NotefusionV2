@@ -1,16 +1,23 @@
 import React from "react";
 import Footer from "./Footer";
 import BotonFlecha from "./BotonFlecha";
+import { useNavigate } from "react-router-dom";
 
 function TermYCond() {
+  const navigate = useNavigate(); // Inicializa useNavigate
+
+  const handleNavigation = () => {
+    navigate("/ruta"); // Reemplaza '/ruta' con la ruta a la que deseas navegar
+  };
   return (
     <div>
-      <BotonFlecha />
-      <section class="py-5 bg-light">{/* Texto de Terminos y Condiciones */}
+      <section class="py-5 bg-light">
+        {/* Texto de Terminos y Condiciones */}
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10">
               <h2 class="text-center mb-5">
+                <BotonFlecha onClick={handleNavigation} />{" "}
                 Términos y Condiciones de Uso - NoteFusion
               </h2>
 

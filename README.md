@@ -57,5 +57,5 @@
    Listo, no seas bot y siempre trabaja en tu rama. Con amor❤️ Eze.
 
 6)       npm install @fortawesome/fontawesome-free
-      (sirve para instalar Font Awesome que se usa en un boton)
+      (sirve para instalar Font Awesome que se usa en un boton, es obligatorio)
 PD:🍆🍑

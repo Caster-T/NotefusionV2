@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../Home/HomeCss/BotonFlecha.css";
 
 const BotonFlecha = () => {
+  const navigate = useNavigate(); // Hook para la navegación
+
+  const handleClick = () => {
+    navigate('/home'); // Redirige a /home
+  };
+
   return (
-    <button className="circle-button">
+    <button className="circle-button" onClick={handleClick}>
       <i className="fas fa-arrow-left"></i>
     </button>
   );
