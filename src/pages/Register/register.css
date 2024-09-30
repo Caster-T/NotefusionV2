@@ -1,0 +1,79 @@
+/* Contenedor principal */
+.login-container-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+  height: 100vh; /* Para que ocupe toda la pantalla */
+  padding: 20px;
+}
+
+/* Contenedor del grid */
+.grid-container-register {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-rows: 1fr; /* Una fila */
+  gap: 20px; /* Espaciado entre columnas */
+  height: 100%; /* Para que ocupe toda la altura */
+  align-items: center;
+  justify-items: center; /* Centra horizontalmente */
+}
+
+/* Ajuste de la imagen y flecha */
+.image-register {
+  display: flex;
+  justify-content: flex-start; /* Ajusta la posición a la izquierda */
+  align-items: center;
+  padding-left: 40px; /* Ajusta el padding según sea necesario */
+}
+
+/* Contenido de texto del formulario */
+.text-content-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el texto a la izquierda */
+  padding: 20px;
+  max-width: 400px; /* Limitar el ancho del formulario */
+}
+
+/* Títulos */
+.text-content-register h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Estilos de los campos de texto */
+.text-content-register input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de envío */
+.text-content-register button {
+  background-color: #7b7df7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.text-content-register button:hover {
+  background-color: #6366f1;
+}
+
+/* Footer ajustado */
+.footer-register {
+  text-align: center;
+  background-color: #f1f1f1;
+}

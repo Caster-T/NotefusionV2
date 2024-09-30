@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Canvas from './pages/Canvas/canvas';
-import Registrar from './pages/Register/Register';
+import Register from './pages/Register/Register';
 import Login from './pages/Login/login';
 import TermYCond from './pages/TermYCond/TermYCond';
 import AboutUs from './pages/AboutUs/AboutUs'
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Canvas" element={<Canvas />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Registrar" element={<Registrar />} />
+        <Route path="/Registrar" element={<Register />} />
         <Route path="/TerminosYCondiciones" element={<TermYCond />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
