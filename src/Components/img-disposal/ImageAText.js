@@ -1,14 +1,13 @@
 import React from "react";
-import myImage from "../assets/imagen1.png";
 
-const ImageSection = () => {
+const ImageAText = ({img}) => {
   return (
     <img
-      src={myImage}
+      src={img}
       alt="Descripción de la imagen"
       style={{ width: "100%", height: "auto" }}
     />
   );
 };
 
-export default ImageSection;
+export default ImageAText;

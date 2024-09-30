@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from "./CompRepetitivos/Footer";
+import Footer from "../../Components/Footer/Footer";
 
 function Canvas() {
   return (

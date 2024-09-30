@@ -1,5 +1,5 @@
 import React from "react";
-import "../../estilosApp/footer.css";
+import "./footer.css";
 import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./CompRepetitivos/Footer";
-import BotonFlecha from "./CompRepetitivos/BotonFlecha";
+import Footer from "../../Components/Footer/Footer";
+import BotonFlecha from "../../Components/Buttons/ButtonArrow/ButtonArrow";
 import { useNavigate } from "react-router-dom";
 
 function TermYCond() {

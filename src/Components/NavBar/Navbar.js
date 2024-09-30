@@ -1,5 +1,6 @@
 import React from "react";
-import '../../estilosApp/NavBar.css';
+import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
   render() {
@@ -8,10 +9,10 @@ class NavBar extends React.Component {
         <h1 className="site-title">NoteFusion</h1>
         <div className="nav-items">
           <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/AboutUs">About Us</a></li>
-            <li><a href="/login" id="login">Iniciar Sesión</a></li>
-            <li><a href="/Registrar">Registrarse</a></li>
+            <Link to ="/">Inicio</Link>
+            <Link to ="/AboutUs">About Us</Link>
+            <Link to ="/login" id="login">Iniciar Sesión</Link>
+            <Link to ="/Registrar">Registrarse</Link>
           </ul>
         </div>
       </nav>

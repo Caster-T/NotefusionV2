@@ -1,5 +1,5 @@
 import React from "react";
-import "../Home/HomeCss/Seccion.css";
+import "./Seccion.css";
 
 const Seccion = ({ imagen, texto, invertido }) => {
   return (

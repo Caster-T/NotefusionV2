@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "../../estilosApp/BotonFlecha.css";
+import "./ButtonArrow.css";
 
 const BotonFlecha = () => {
   const navigate = useNavigate(); // Hook para la navegación

@@ -1,12 +1,13 @@
 import React from "react";
-import NavBar from "./CompRepetitivos/Navbar";
-import Header from "../Home/Header"; 
-import ImageSection from "../Home/ImageSection";
-import ButtonGroup from "../Home/ButtonGroup";
-import Footer from "./CompRepetitivos/Footer";
-import Seccion from "../Home/Seccion";
-import image from "../assets/placeholdeer.png";
-import "../Home/HomeCss/Home.css";
+import Seccion from "../../Components/img-disposal/Seccion/Seccion";
+import ImageAText from "../../Components/img-disposal/ImageAText";
+import NavBar from "../../Components/NavBar/Navbar";
+import Header from "./Header"; 
+import ButtonGroup from "./ButtonGroup";
+import Footer from "../../Components/Footer/Footer";
+import image from "../../assets/images/placeholdeer.png";
+import imagenHome from "../../assets/images/imagen1.png";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
 
       <div className="grid-container">
         <div className="image">
-          <ImageSection />
+          <ImageAText img={imagenHome} />
         </div>
         <div className="text-content">
           <Header title={"Organiza tus tareas con Notefusion"} />
