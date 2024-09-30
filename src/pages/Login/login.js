@@ -25,9 +25,10 @@ function Login() {
 
   return (
     <div className="login-container">   
-        <BotonFlecha onClick={handleNavigation} /> 
+         
         <div className="grid-container">
           <div className="image">
+          <BotonFlecha onClick={handleNavigation} />
             <ImageAText img={imageLogin}/>
           </div>
         <div className="text-content">
@@ -39,7 +40,6 @@ function Login() {
           </form>
         </div>
       </div>
-
       <footer className="footer">
         <Footer />
       </footer>
