@@ -1,0 +1,76 @@
+import React, { useState, useEffect } from 'react';
+import CustomizationPanel from './CustomizationPanel';
+
+
+function App() {
+  const [sections, setSections] = useState([]);
+
+  useEffect(() => {
+    const savedSections = JSON.parse(localStorage.getItem('pageSections'));
+    if (savedSections) {
+      setSections(savedSections);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('pageSections', JSON.stringify(sections));
+  }, [sections]);
+
+  const addSection = () => {
+    setSections([
+      ...sections,
+      {
+        id: Date.now(),
+        content: 'Edit me!', // Default editable content
+        backgroundColor: '#ffffff',
+        textColor: '#000000',
+        fontSize: '16px',
+      },
+    ]);
+  };
+
+  const updateSection = (id, updatedProps) => {
+    setSections(sections.map(section => section.id === id ? { ...section, ...updatedProps } : section));
+  };
+
+  const handleContentChange = (id, newContent) => {
+    updateSection(id, { content: newContent });
+  };
+
+  const removeSection = (id) => {
+    setSections(sections.filter(section => section.id !== id));
+  };
+
+  return (
+    <div>
+      <h1>Customizable Page</h1>
+
+      {sections.map((section) => (
+        <div
+          key={section.id}
+          style={{
+            backgroundColor: section.backgroundColor,
+            color: section.textColor,
+            fontSize: section.fontSize,
+            padding: '10px',
+            marginBottom: '10px',
+            border: '1px solid #ccc'
+          }}
+        >
+          {/* Editable Text Area */}
+          <input
+            type="text"
+            value={section.content}
+            onChange={(e) => handleContentChange(section.id, e.target.value)}
+          />
+          <CustomizationPanel section={section} updateSection={updateSection} />
+          <button onClick={() => removeSection(section.id)}>Remove Section</button>
+        </div>
+      ))}
+
+      <button onClick={addSection}>Add New Section</button>
+    </div>
+  );
+}
+
+export default App;
