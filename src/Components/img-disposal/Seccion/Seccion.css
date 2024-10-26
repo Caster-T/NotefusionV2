@@ -1,0 +1,75 @@
+.contenedorComponenteSeccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.seccion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.seccion-invertida {
+  flex-direction: row-reverse;
+}
+
+.SeccionMarco {
+  width: 50%;
+}
+
+.seccionImagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.seccionTexto {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.seccionTexto p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.seccion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .seccion {
+    flex-direction: column;
+  }
+
+  .SeccionMarco,
+  .seccionTexto {
+    width: 100%;
+  }
+
+  .seccionImagen img {
+    width: 100%;
+    height: auto;
+  }
+
+  .seccion-invertida {
+    flex-direction: column;
+  }
+}

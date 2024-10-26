@@ -1,0 +1,36 @@
+
+.ContenedorFlex {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    background-color: #0b1320;
+  }
+  
+  .NoteFusion{
+    margin-bottom: 4px;
+    color: white;
+    padding: 20px;
+    font-size: 1.08rem;
+    text-decoration: none;
+    background-color: #0b1320;
+    border: none;
+    font-weight: 700;
+  }
+
+  .HijoFlex {
+    margin-bottom: 4px;
+    color: white;
+    padding: 20px;
+    font-size: 1.05rem;
+    text-decoration: none;
+    background-color: #0b1320;
+    border: none;
+  }
+  
+  .HijoFlex:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }

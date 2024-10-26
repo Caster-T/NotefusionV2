@@ -1,0 +1,132 @@
+
+
+.grid-container {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.image {
+  text-align: center;
+}
+
+.text-content {
+  text-align: left;
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  margin: 0;
+  padding: 0; 
+  display: flex;
+  gap: 15px;
+  margin-top: 60px;
+}
+
+.btn {
+  background-color: #7f9bfd;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.contenedorSeccion {
+  padding-top: 6%;
+}
+
+
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin: 2% auto;
+  line-height: 1.2;
+}
+
+.subtitle span {
+  display: block;
+}
+
+.paragraph{
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: #222;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .HijoFlex {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contenedorSeccion {
+    padding: 5%;
+    border-width: 2px;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    margin-left: 0; 
+  }
+}

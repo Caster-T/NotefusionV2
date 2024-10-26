@@ -1,0 +1,74 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #e5e5e5;
+  }
+  
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+
+  .text-content h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+ 
+  .text-content input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Botón de envío */
+  .text-content button {
+    background-color: #7b7df7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .text-content button:hover {
+    background-color: #6366f1;
+  }
+  

@@ -1,0 +1,42 @@
+  .InputLabel {
+    width: 500px; /* El input será más largo */
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .PasswordContainer {
+    position: relative;
+    width: 100%; /* Usamos el 100% del espacio disponible */
+  }
+  
+  .InputField {
+    width: 500px; /* El input será más largo */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-right: 45px; /* Espacio para el botón dentro del input */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  }
+  
+  .TogglePasswordButton {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    color: #333; /* Color del ícono */
+
+  }
+  
+  .TogglePasswordButton:focus {
+    outline: none;
+  }
+  
