@@ -1,7 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import {
+<<<<<<< HEAD
   ReactFlow,
   MiniMap,
+=======
+  ReactFlow,  
+>>>>>>> Prueba
   Controls,
   Background,
   useNodesState,
@@ -12,6 +16,10 @@ import '@xyflow/react/dist/style.css';
 import './canva.css';
 import AddNode1 from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
+<<<<<<< HEAD
+=======
+import Toolbar from './componentes/toolBar/toolBar';
+>>>>>>> Prueba
 
 const initialNodes = [];
 const initialEdges = [];
@@ -70,10 +78,20 @@ export default function App() {
         nodeTypes={{ resizable: ResizableNode }}
       >
         <Controls />
+<<<<<<< HEAD
         <MiniMap />
         <Background variant="dots" gap={12} size={1} />
       </ReactFlow>
       <AddNode1 setNodes={setNodes} />
+=======
+        <Toolbar setNodes={setNodes} />
+        <Background variant="dots" gap={12} size={1} />
+        <div className="add-node-button-container btn-add'">
+          <AddNode1 setNodes={setNodes} />
+        </div>
+      </ReactFlow>
+      
+>>>>>>> Prueba
       <div className="updatenode__controls">
         <input
           value={nodeName}
@@ -85,7 +103,13 @@ export default function App() {
           onChange={(evt) => setNodeBg(evt.target.value)}
         />
       </div>
+<<<<<<< HEAD
       {selectedNodeId && <p>Nodo seleccionado: {selectedNodeId}</p>}
     </div>
   );
 }
+=======
+    </div>
+  );
+}
+>>>>>>> Prueba
