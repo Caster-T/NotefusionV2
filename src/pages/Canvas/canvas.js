@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import ReactFlow, {
-  addEdge,
-  Background,
-  Controls,
-  MiniMap
-} from 'react-flow-renderer';
-import './Canvas.css'; // Si vas a usar estilos
-
-const initialElements = [];
-
-function Canvas() {
-  const [elements, setElements] = useState(initialElements);
-
-  const addNode = (type) => {
-    const id = `${elements.length + 1}`;
-    const newNode = {
-      id,
-      type: 'default',
-      data: { label: `${type} ${id}` },
-      position: { x: Math.random() * 250, y: Math.random() * 250 },
-    };
-    setElements((els) => [...els, newNode]);
-  };
-
-  const onConnect = (params) => setElements((els) => addEdge(params, els));
-
-  return (
-    <div className="app">
-      <div className="navbar">
-        <button onClick={() => addNode('Cuadrado')}>Agregar Cuadrado</button>
-        <button onClick={() => addNode('Círculo')}>Agregar Círculo</button>
-      </div>
-
-      <div className="canvas">
-        <ReactFlow
-          elements={elements}
-          onConnect={onConnect}
-          snapToGrid={true}
-          snapGrid={[15, 15]}
-          style={{ width: '100%', height: '90vh' }}
-        >
-          <Background variant="dots" gap={12} size={1} />
-          <Controls />
-          <MiniMap />
-        </ReactFlow>
-=======
 import React, { useCallback, useEffect, useState } from 'react';
 import {
   ReactFlow,  
@@ -61,7 +13,7 @@ import AddNode1 from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
 import Toolbar from './componentes/toolBar/toolBar';
 
-const initialNodes = [];
+const initialNodes = [{ id: '1', position: { x: 0, y: 0 }, data: { label: 'Apreta el + para inciar' } }];
 const initialEdges = [];
 const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
 
@@ -135,7 +87,6 @@ export default function App() {
           value={nodeBg}
           onChange={(evt) => setNodeBg(evt.target.value)}
         />
->>>>>>> 37ca5c3e2dd5f87395a524dbea78704dabe71632
       </div>
     </div>
   );
