@@ -9,11 +9,11 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import './canva.css';
-import AddNode1 from './componentes/addNode';
+import Agregarnodo from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
 import Toolbar from './componentes/toolBar/toolBar';
 
-const initialNodes = [];
+const initialNodes = [{ id: '1', position: { x: 0, y: 0 }, data: { label: 'Apreta el + para inciar' } }];
 const initialEdges = [];
 const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
 
@@ -73,7 +73,7 @@ export default function App() {
         <Toolbar setNodes={setNodes} />
         <Background variant="dots" gap={12} size={1} />
         <div className="add-node-button-container btn-add'">
-          <AddNode1 setNodes={setNodes} />
+          <Addnode1 setNodes={setNodes} />
         </div>
       </ReactFlow>
       

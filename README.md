@@ -58,5 +58,8 @@
 
 6)       npm install @fortawesome/fontawesome-free
       (sirve para instalar Font Awesome que se usa en un boton, es obligatorio)
+
+7)       npm install 
+      (sirve para instalar librerias de los nodos y esas cosas)
       
 PD:🍆🍑
