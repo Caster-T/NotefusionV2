@@ -2,11 +2,7 @@ import React, { useCallback } from 'react';
 import ResizableNodeSelected from './ResizableNode.js';
 let nodeId = 0;
 
-<<<<<<< HEAD
-function Poto({ setNodes }) {
-=======
 function Agregarnodo({ setNodes }) {
->>>>>>> Prueba
     const onClick = useCallback(() => {
         const id = `${++nodeId}`;
         const newNode = {
@@ -25,20 +21,10 @@ function Agregarnodo({ setNodes }) {
     }, [setNodes]);
 
     return (
-<<<<<<< HEAD
-        <button onClick={onClick} className="btn-add">
-            Add Node
-        </button>
-=======
         <button onClick={onClick} className='btn-add'> + </button>
->>>>>>> Prueba
     );
 }
 
 export default function AddNode1({ setNodes }) {
-<<<<<<< HEAD
-    return <Poto setNodes={setNodes} />;
-=======
     return <Agregarnodo setNodes={setNodes} />;
->>>>>>> Prueba
 }

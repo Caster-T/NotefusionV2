@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 
-<<<<<<< HEAD
+
 .btn-add {
   position: absolute;
   z-index: 10;
@@ -18,8 +18,8 @@ body {
   left: 10px;
 }
 
-=======
->>>>>>> Prueba
+
+
 .inputname{
   position: absolute;
   z-index: 10;
@@ -28,14 +28,14 @@ body {
 }
 
 .updatenode__controls {
-<<<<<<< HEAD
+
   position: absolute;
   right: 10px;
   top: 10px;
   z-index: 4;
   font-size: 12px;
   
-=======
+
   padding: 5px; /* Reduce el padding para hacerlo más pequeño */
   border-top: 1px solid #ececec;
   background: #f8f8f8;
@@ -79,5 +79,4 @@ body {
 
 .btn-add:hover {
   background-color: #0056b3; /* Cambia el color al pasar el mouse */
->>>>>>> Prueba
 }

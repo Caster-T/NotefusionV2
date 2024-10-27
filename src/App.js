@@ -7,6 +7,7 @@ import Login from './pages/Login/login';
 import TermYCond from './pages/TermYCond/TermYCond';
 import AboutUs from './pages/AboutUs/AboutUs'
 import NotFound from './pages/NotFound/NotFound';
+import Proyectos from './pages/Proyectos/proyectos';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -20,7 +21,8 @@ function App() {
         <Route path="/Registrar" element={<Register />} />
         <Route path="/TerminosYCondiciones" element={<TermYCond />} />
         <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="*" eluement={<NotFound />} />
       </Routes>
     </>
   );
