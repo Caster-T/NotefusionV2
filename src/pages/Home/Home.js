@@ -5,7 +5,7 @@ import NavBar from "../../Components/NavBar/Navbar";
 import Header from "./Header"; 
 import ButtonGroup from "./ButtonGroup";
 import Footer from "../../Components/Footer/Footer";
-import image from "../../assets/images/placeholdeer.png";
+import image from "../../assets/images/Tarjeta_1.png";
 import imagenHome from "../../assets/images/imagen1.png";
 import "./Home.css";
 
@@ -45,18 +45,19 @@ const Home = () => {
         />
         <Seccion
           imagen={image}
-          texto="Organizar tareas en tableros visuales que se pueden dividir en fases, categorías o prioridades, y mover fácilmente las tareas entre las diferentes etapas del proyecto."
+          texto="Personaliza cada nodo del roadmap modificando su tamaño y color según tus preferencias. Esta flexibilidad permite resaltar las fases más importantes o diferenciarlas visualmente. "
           invertido={false}
         />
-        <Seccion
+        {/* <Seccion
           imagen={image}
           texto="Gestionar equipos y colaborar en tiempo real, asignando tareas, agregando descripciones, comentarios y compartiendo archivos de manera eficiente."
           invertido={true}
-        />
+        /> */}
         <Seccion
           imagen={image}
-          texto="Automatizar flujos de trabajo para optimizar la productividad, integrando herramientas externas y configurando reglas automáticas que te ahorran tiempo."
-          invertido={false}
+          texto="Cada proyecto puede ser completamente personalizado con descripciones detalladas, objetivos específicos y titulos clave. 
+          Esto te permite definir claramente el alcance y los resultados esperados, asegurando que estés alineado."
+          invertido={true}
         />
       </div>
 

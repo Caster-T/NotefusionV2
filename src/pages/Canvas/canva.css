@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.btn-add {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 10px;
+}
+
+
+
+.inputname{
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+  left: 10px;
+}
+
+.updatenode__controls {
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+  font-size: 12px;
+  
+
+  padding: 5px; /* Reduce el padding para hacerlo más pequeño */
+  border-top: 1px solid #ececec;
+  background: #f8f8f8;
+  position: absolute;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Alinea al centro */
+  width: 400px; /* Ancho fijo para el panel */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  border-radius: 15px;
+  border: solid black 1px;
+  text-align: center;
+}
+
+.add-node-button-container {
+  position: absolute; /* Posiciona el contenedor absolutamente */
+  bottom: 20px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la derecha */
+  z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+}
+
+.btn-add {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #7f9bfd;
+  color: white;
+  display: block;
+  content: "+";
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-size: 2.5em;
+  line-height: 1.1em;
+}
+
+.btn-add:hover {
+  background-color: #0056b3; /* Cambia el color al pasar el mouse */
+}

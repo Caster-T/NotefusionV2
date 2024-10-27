@@ -1,0 +1,43 @@
+.listaTarjetas {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en múltiples filas */
+  justify-content: center; /* Centrar las tarjetas en la fila */
+  margin: 20px 0; /* Espacio alrededor de la lista de tarjetas */
+}
+
+.ContainerTarjetas {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Tamaño fijo para las tarjetas */
+  margin: 10px; /* Espacio entre tarjetas */
+  padding: 15px;
+}
+
+.ContainerTarjetas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.TituloTarjetas {
+  text-align: left; /* Alinear el título a la izquierda */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+.TituloTarjetas h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.DescripcionTarjetas {
+  padding: 10px 0;
+  text-align: left;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+  width: 100%;
+}
