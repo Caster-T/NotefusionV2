@@ -9,7 +9,7 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import './canva.css';
-import AddNode1 from './componentes/addNode';
+import Agregarnodo from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
 import Toolbar from './componentes/toolBar/toolBar';
 
@@ -73,7 +73,7 @@ export default function App() {
         <Toolbar setNodes={setNodes} />
         <Background variant="dots" gap={12} size={1} />
         <div className="add-node-button-container btn-add'">
-          <AddNode1 setNodes={setNodes} />
+          <Agregarnodo setNodes={setNodes} />
         </div>
       </ReactFlow>
       
