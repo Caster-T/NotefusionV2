@@ -1,0 +1,73 @@
+.toolbar {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+.site-title {
+    z-index: 10;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+.nav-items ul {
+    z-index: 10;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-items li {
+    z-index: 10;
+    margin: 0 15px;
+}
+.nav-items a {
+    z-index: 10;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.nav-items a:hover {
+    z-index: 10;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btnCloud {
+    background-color: transparent;
+    position: relative;
+    fill: rgb(155, 153, 153);
+    border: none;
+  }
+  
+  .icon {
+    transform: scale(1.4);
+    transition: 200ms linear;
+  }
+  
+  .btnCloud:hover > .icon {
+    transform: scale(1.7);
+  }
+  
+  .btnCloud:hover > .icon path {
+    fill: #e7e7e7;
+    cursor: pointer;
+  }
+  
+  .btnCloud:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: -100%;
+  }

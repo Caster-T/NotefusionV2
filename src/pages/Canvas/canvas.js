@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import {
-  ReactFlow,
-  MiniMap,
+  ReactFlow,  
   Controls,
   Background,
   useNodesState,
@@ -12,6 +11,7 @@ import '@xyflow/react/dist/style.css';
 import './canva.css';
 import AddNode1 from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
+import Toolbar from './componentes/toolBar/toolBar';
 
 const initialNodes = [];
 const initialEdges = [];
@@ -70,10 +70,13 @@ export default function App() {
         nodeTypes={{ resizable: ResizableNode }}
       >
         <Controls />
-        <MiniMap />
+        <Toolbar setNodes={setNodes} />
         <Background variant="dots" gap={12} size={1} />
+        <div className="add-node-button-container btn-add'">
+          <AddNode1 setNodes={setNodes} />
+        </div>
       </ReactFlow>
-      <AddNode1 setNodes={setNodes} />
+      
       <div className="updatenode__controls">
         <input
           value={nodeName}
@@ -85,7 +88,6 @@ export default function App() {
           onChange={(evt) => setNodeBg(evt.target.value)}
         />
       </div>
-      {selectedNodeId && <p>Nodo seleccionado: {selectedNodeId}</p>}
     </div>
   );
 }
