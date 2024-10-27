@@ -9,6 +9,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import NotFound from './pages/NotFound/NotFound';
 import Proyectos from './pages/Proyectos/proyectos';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Perfil from './pages/Perfil/Perfil'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/TerminosYCondiciones" element={<TermYCond />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/perfil" element={<Perfil />} />
         <Route path="*" eluement={<NotFound />} />
       </Routes>
     </>
