@@ -28,7 +28,7 @@ const Perfil = () => {
     <NavBar/>
     </nav>
 
-<div className="grid-container">
+<div className="grid-container2">
     
     <div className="profile-container">
       <h1>Perfil de Usuario</h1>
