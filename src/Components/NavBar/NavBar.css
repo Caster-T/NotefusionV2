@@ -42,17 +42,3 @@
     border: 2px solid black;
     border-radius: 5px;
   }
-  
-  #login {
-    border: none;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #login:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  

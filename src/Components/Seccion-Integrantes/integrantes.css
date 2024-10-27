@@ -1,0 +1,13 @@
+.seccionIntegrantes {
+    background-color: #ffffff;
+    border:2px solid black;
+    border-radius:12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.seccionIntegrantes h3{
+    font-size: 1,2rem;
+}
