@@ -23,6 +23,9 @@ const handleLogin = () => {
         <NavBar isAuthenticated={isAuthenticated} />
       </nav>
 
+      <button className="prueba" onClick={handleLogin}>Simular Iniciar Sesión</button>
+
+
       <div className="grid-container">
         <div className="image">
           <ImageAText img={imagenHome} />
