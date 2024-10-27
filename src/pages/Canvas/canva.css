@@ -10,16 +10,6 @@ body {
   height: 100vh;
 }
 
-
-.btn-add {
-  position: absolute;
-  z-index: 10;
-  top: 10px;
-  left: 10px;
-}
-
-
-
 .inputname{
   position: absolute;
   z-index: 10;
