@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Perfil.css";
 import NavBar from "../../Components/NavBar/Navbar";
 import LogoutButton from "./Componentes/Logoutbutton";
-import placeholderPFP from './Componentes/placeholderPFP.png';
+import placeholderPFP from '../../assets/images/placeholdeer.png';
 
 const Perfil = () => {
   

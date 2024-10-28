@@ -1,10 +1,14 @@
-// Popup.js
-import React, { useState } from 'react';
-import './popup.css'; 
+import React, { useState, useEffect } from 'react';
+import './popup.css';
 
-const Popup = ({ open, onClose, onAddCard }) => {
-  const [titulo, setTitulo] = useState('');
-  const [descripcion, setDescripcion] = useState('');
+const Popup = ({ open, onClose, onAddCard, initialTitulo = '', initialDescripcion = '' }) => {
+  const [titulo, setTitulo] = useState(initialTitulo);
+  const [descripcion, setDescripcion] = useState(initialDescripcion);
+
+  useEffect(() => {
+    setTitulo(initialTitulo);
+    setDescripcion(initialDescripcion);
+  }, [initialTitulo, initialDescripcion]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +23,7 @@ const Popup = ({ open, onClose, onAddCard }) => {
   return (
     <div className="overlay">
       <div className="popup">
-        <h2>Nuevo proyecto</h2>
+        <h2>{initialTitulo ? 'Editar Proyecto' : 'Nuevo Proyecto'}</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -33,9 +37,8 @@ const Popup = ({ open, onClose, onAddCard }) => {
             placeholder="Descripción"
             value={descripcion}
             onChange={(e) => setDescripcion(e.target.value)}
-          
           />
-          <button type="submit">Agregar</button>
+          <button type="submit">{initialTitulo ? 'Guardar Cambios' : 'Agregar'}</button>
           <button type="button" onClick={onClose}>Cerrar</button>
         </form>
       </div>
