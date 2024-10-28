@@ -9,7 +9,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import NotFound from './pages/NotFound/NotFound';
 import Proyectos from './pages/Proyectos/proyectos';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import SuccessPage from './pages/SuccesPage/SuccessPage';
 
 function App() {
   return (
@@ -18,11 +18,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Canvas" element={<Canvas />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Registrar" element={<Register />} />
+        <Route path="/Success" element={<SuccessPage />} />
+        {/* <Route path="/Registrar" element={<Register />} /> */}
         <Route path="/TerminosYCondiciones" element={<TermYCond />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/proyectos" element={<Proyectos />} />
-        <Route path="*" eluement={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
