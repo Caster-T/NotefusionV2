@@ -71,9 +71,7 @@ const handleLogin = () => {
         />
       </div>
 
-      <footer className="footer">
         <Footer />
-      </footer>
     </>
   );
 };
