@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import ResizableNodeSelected from './ResizableNode.js';
+
 let nodeId = 0;
 
 function Agregarnodo({ setNodes }) {
