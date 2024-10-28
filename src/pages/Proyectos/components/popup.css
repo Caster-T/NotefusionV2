@@ -53,21 +53,21 @@
   }
   
   .popup button[type="submit"] {
-    background-color: #007bff; 
-    color: white;
+    background-color: #cbcaca; 
+    color: rgb(80, 80, 80);
   }
   
   .popup button[type="submit"]:hover {
-    background-color: #0056b3; 
+    background-color: #373535; 
   }
   
   .popup button[type="button"] {
-    background-color: #f44336; 
-    color: white; 
+    background-color: #cbcaca; 
+    color: rgb(80, 80, 80); 
   }
   
   .popup button[type="button"]:hover {
-    background-color: #c62828;
+    background-color: #afaaaa;
   }
   
   

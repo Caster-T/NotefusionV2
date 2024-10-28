@@ -42,9 +42,9 @@ function Register() {
           </div>
         </div>
       </div>
-      <footer className="footer-register">
+
         <Footer />
-      </footer>
+
     </>
   );
 }
