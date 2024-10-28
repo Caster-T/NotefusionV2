@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Footer from "../../Components/Footer/Footer";
 import BotonFlecha from "../../Components/Buttons/ButtonArrow/ButtonArrow";
 import CampoTexto from "../../Components/CampoTexto/CampoTexto";
@@ -50,3 +50,4 @@ function Register() {
 }
 
 export default Register;
+*/
