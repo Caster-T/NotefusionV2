@@ -13,7 +13,7 @@ import AddNode1 from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
 import Toolbar from './componentes/toolBar/toolBar';
 
-const initialNodes = [];
+const initialNodes = [{ id: '1', position: { x: 0, y: 0 }, data: { label: 'Apreta el + para inciar' } }];
 const initialEdges = [];
 const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
 
