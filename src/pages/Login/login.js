@@ -79,13 +79,18 @@ function Login() {
   if (loading) return null;
 
   return (
-    <Auth
-      supabaseClient={supabase}
-      appearance={{ theme: ThemeSupa }}
-      theme='dark'
-      providers={["discord"]}
-    />
+    <div className="auth-container">
+      <div className="auth-box">
+        <Auth
+          supabaseClient={supabase}
+          appearance={{ theme: ThemeSupa }}
+          theme='dark'
+          providers={["discord"]}
+        />
+      </div>
+    </div>
   );
+  
 }
 
 export default Login;
