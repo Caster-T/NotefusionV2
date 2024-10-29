@@ -21,7 +21,7 @@ function Agregarnodo({ setNodes }) {
     }, [setNodes]);
 
     return (
-        <button onClick={onClick} className='btn-add'> + </button>
+        <button onClick={onClick} className='btn-add'>+</button>
     );
 }
 

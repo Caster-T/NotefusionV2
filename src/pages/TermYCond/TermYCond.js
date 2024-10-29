@@ -150,9 +150,7 @@ function TermYCond() {
           </div>
         </div>
       </section>
-      <footer className="footer">
         <Footer />
-      </footer>
     </div>
   );
 }
