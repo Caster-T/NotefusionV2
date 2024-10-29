@@ -39,7 +39,8 @@
   }
   
   .add-button,
-  .delete-button{
+  .delete-button,
+  .continue-button{
     padding: 10px 15px ;
     border: none;
     border-radius: 5px;
@@ -58,29 +59,24 @@
     margin-bottom: 10px;
   }
   
-  .add-button {
-    background-color: #e0e0e0; 
+  .add-button,  
+  .continue-button,
+  .editar-button {
+    background-color: #41c3ff; 
     color: #333; 
   }
   
-  .add-button:hover {
-    background-color: #bdbdbd; 
+  .add-button:hover,
+  .continue-button:hover,
+  .editar-button:hover {
+    background-color: #3bb1e8; 
   }
   
   .delete-button {
-    background-color: #cccccc; 
+    background-color: #fe5858; 
     color: #333; 
   }
   
   .delete-button:hover {
-    background-color: #aaaaaa; 
-  }
-
-  .editar-button {
-    background-color: #e0e0e0; 
-    color: #333; 
-  }
-
-  .editar-button:hover {
-    background-color: #aaaaaa; 
+    background-color: #ff4343; 
   }

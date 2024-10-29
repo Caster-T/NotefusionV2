@@ -13,7 +13,9 @@ import AddNode1 from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
 import Toolbar from './componentes/toolBar/toolBar';
 
-const initialNodes = [{ id: '1', position: { x: 0, y: 0, zoom: 0.0 }, data: { label: 'Apreta el + para inciar' } }];
+
+const initialNodes = [{ id: '1', position: { x: 0, y: 0 }, data: { label: 'Apreta el + para inciar' } }];
+
 const initialEdges = [];
 const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
 
@@ -52,6 +54,8 @@ return node;
 }
 }, [nodeName, nodeBg, selectedNodeId, setNodes]);
 
+
+
 return (
 <div style={{ width: '100vw', height: '100vh' }}>
 <ReactFlow
@@ -77,13 +81,12 @@ nodeTypes={{ resizable: ResizableNode }}
 </div>
 </ReactFlow>
 
+<div className="updatenode__controls">
 <input
 value={nodeName}
 onChange={(evt) => setNodeName(evt.target.value)}
 />
-<div className="updatenode__controls">
-
-<input
+<input className='color-button'
 type="color"
 value={nodeBg}
 onChange={(evt) => setNodeBg(evt.target.value)}
