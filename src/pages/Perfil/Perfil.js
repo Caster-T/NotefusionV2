@@ -1,62 +1,67 @@
 import React, { useState } from "react";
 import "./Perfil.css";
+import Footer from "../../Components/Footer/Footer";
 import NavBar from "../../Components/NavBar/Navbar";
 import LogoutButton from "./Componentes/Logoutbutton";
-import placeholderPFP from "../../assets/images/placeholdeer.png";
+import placeholderPFP from "./Componentes/placeholderPFP.png";
 
 const Perfil = () => {
   const handleJobSelect = (job) => {
     alert(`Has seleccionado: ${job}`);
   };
 
-  const [userName, setUserName] = useState("Nombre de usuario");
-  const [profileImage, setProfileImage] = useState(placeholderPFP.png);
+  const [userName, setUserName] = useState("Nombre");
   const [userDescription, setUserDescription] = useState(
-    "Descripcion del usuario"
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
   );
 
   const handleDescriptionChange = () => {
     const newDescription = prompt(
       "Ingresa una nueva descripción:",
       userDescription
-    ); // Prompt para ingresar nueva descripción
+    );
     if (newDescription !== null && newDescription.trim() !== "") {
-      setUserDescription(newDescription); // Actualiza la descripción si es válida
+      setUserDescription(newDescription);
     }
   };
 
   return (
-    <div>
-      <nav>
+    <div className="containerProyect">
+      <div>
         <NavBar />
-      </nav>
+      </div>
 
-      <div className="grid-container2">
-        <div className="profile-container">
-          <h1>Perfil de Usuario</h1>
-          <div className="profile-info">
-            <img src={profileImage} />
-            <h2>{userName}</h2>
-            <p>Descripción: {userDescription}</p>
-            <button onClick={handleDescriptionChange}>
-              Modificar Descripción
-            </button>
+      <div className="main">
+        <div className="perfil-page">
+          <div className="perfil-container">
+            <div className="perfil-content">
+              <div className="profile-picture-container">
+                <img
+                  src={placeholderPFP}
+                  alt="Profile"
+                  className="profile-picture"
+                />
+              </div>
+              <div className="profile-info">
+                <h2 className="user-name">{userName}</h2>
+                <p className="user-description">{userDescription}</p>
+                <button
+                  className="edit-description"
+                  onClick={handleDescriptionChange}
+                >
+                  Modificar Descripción
+                </button>
+              </div>
+              <LogoutButton>
+                <button className="logout-button">Cerrar Sesion</button>
+              </LogoutButton>
+            </div>
           </div>
-          <LogoutButton>
-            <button>Cerrar sesion?</button>
-          </LogoutButton>
-        </div>
-
-        <div className="job-section">
-          <h2>Trabajos</h2>
-          <ul className="jobs">
-            <li onClick={() => handleJobSelect("Trabajo 1")}>Trabajo 1</li>
-            <li onClick={() => handleJobSelect("Trabajo 2")}>Trabajo 2</li>
-            <li onClick={() => handleJobSelect("Trabajo 3")}>Trabajo 3</li>
-          </ul>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };
