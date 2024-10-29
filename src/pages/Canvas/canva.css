@@ -10,11 +10,20 @@ body {
   height: 100vh;
 }
 
+
+
+/* .btn-add {
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+} */
+
 .inputname{
   position: absolute;
   z-index: 10;
-  top: 50px;
-  left: 10px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .updatenode__controls {
@@ -49,16 +58,55 @@ body {
   background-color: #7f9bfd;
   color: white;
   display: block;
-  content: "+";
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline: none;
   transition: background-color 0.3s ease;
-  font-size: 2.5em;
+  font-size: 1.5em;
   line-height: 1.1em;
 }
 
 .btn-add:hover {
   background-color: #0056b3; /* Cambia el color al pasar el mouse */
+}
+.color-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.3s ease;
+  appearance: none;
+}
+
+.color-button::-webkit-color-swatch {
+  border: none; /* Sin borde para la muestra de color en WebKit */
+  border-radius: 5px; /* Bordes redondeados para la muestra */
+}
+
+.color-button::-moz-color-swatch {
+  border: none; /* Sin borde para la muestra de color en Firefox */
+  border-radius: 5px; /* Bordes redondeados para la muestra */
+}
+
+.color-button:hover {
+  opacity: 0.7; 
+}
+
+.color-button.red {
+  background-color: #FFB3B3;
+}
+
+.color-button.blue {
+  background-color: #B3C6FF;
+}
+
+.color-button.yellow {
+  background-color: #FFFFB3;
+}
+
+.color-button.gray {
+  background-color: #B3B3B3;
 }

@@ -1,5 +1,3 @@
-
-
 .grid-container {
   margin-top: 10vh;
   display: grid;
@@ -129,4 +127,8 @@
     font-size: 2rem;
     margin-left: 0; 
   }
+}
+
+.prueba{
+  padding-top: 100px;
 }

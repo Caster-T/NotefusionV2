@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Footer from "../../Components/Footer/Footer";
 import BotonFlecha from "../../Components/Buttons/ButtonArrow/ButtonArrow";
 import CampoTexto from "../../Components/CampoTexto/CampoTexto";
@@ -42,11 +42,12 @@ function Register() {
           </div>
         </div>
       </div>
-      <footer className="footer-register">
+
         <Footer />
-      </footer>
+
     </>
   );
 }
 
 export default Register;
+*/

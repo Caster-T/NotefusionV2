@@ -1,93 +1,104 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import {
-  ReactFlow,  
-  Controls,
-  Background,
-  useNodesState,
-  useEdgesState,
-  addEdge,
+ReactFlow,
+Controls,
+Background,
+useNodesState,
+useEdgesState,
+addEdge,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import './canva.css';
-import Agregarnodo from './componentes/addNode';
+import AddNode1 from './componentes/addNode';
 import ResizableNode from './componentes/ResizableNode';
 import Toolbar from './componentes/toolBar/toolBar';
 
+
 const initialNodes = [{ id: '1', position: { x: 0, y: 0 }, data: { label: 'Apreta el + para inciar' } }];
+
 const initialEdges = [];
 const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
 
 export default function App() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const [selectedNodeId, setSelectedNodeId] = useState(null);
-  const [nodeName, setNodeName] = useState('');
-  const [nodeBg, setNodeBg] = useState('#eee');
+const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+const [selectedNodeId, setSelectedNodeId] = useState(null);
+const [nodeName, setNodeName] = useState('');
+const [nodeBg, setNodeBg] = useState('#eee');
 
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
-    [setEdges],
-  );
+const onConnect = useCallback(
+(params) => setEdges((eds) => addEdge(params, eds)),
+[setEdges],
+);
 
-  const handleNodeClick = (event, node) => {
-    setSelectedNodeId(node.id);
-    setNodeName(node.data.label);
-    setNodeBg(node.style?.backgroundColor || '#FFFFFF');
-  };
+const handleNodeClick = (event, node) => {
+setSelectedNodeId(node.id);
+setNodeName(node.data.label);
+setNodeBg(node.style?.backgroundColor || '#FFFFFF');
+};
 
-  useEffect(() => {
-    if (selectedNodeId) {
-      setNodes((nds) =>
-        nds.map((node) => {
-          if (node.id === selectedNodeId) {
-            return {
-              ...node,
-              data: { ...node.data, label: nodeName }, // Actualiza el label
-              style: { ...node.style, backgroundColor: nodeBg }, // Actualiza el color de fondo
-            };
-          }
-          return node;
-        }),
-      );
-    }
-  }, [nodeName, nodeBg, selectedNodeId, setNodes]);
+useEffect(() => {
+if (selectedNodeId) {
+setNodes((nds) =>
+nds.map((node) => {
+if (node.id === selectedNodeId) {
+return {
+...node,
+data: { ...node.data, label: nodeName },
+style: { ...node.style, backgroundColor: nodeBg },
+};
+}
+return node;
+}),
+);
+}
+}, [nodeName, nodeBg, selectedNodeId, setNodes]);
 
-  return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        defaultViewport={defaultViewport}
-        minZoom={0.2}
-        maxZoom={4}
-        attributionPosition="bottom-left"
-        fitView
-        fitViewOptions={{ padding: 0.5 }}
-        onNodeClick={handleNodeClick} // Manejador para seleccionar nodos
-        nodeTypes={{ resizable: ResizableNode }}
-      >
-        <Controls />
-        <Toolbar setNodes={setNodes} />
-        <Background variant="dots" gap={12} size={1} />
-        <div className="add-node-button-container btn-add'">
-          <Addnode1 setNodes={setNodes} />
-        </div>
-      </ReactFlow>
-      
-      <div className="updatenode__controls">
-        <input
-          value={nodeName}
-          onChange={(evt) => setNodeName(evt.target.value)}
-        />
-        <input
-          type="color"
-          value={nodeBg}
-          onChange={(evt) => setNodeBg(evt.target.value)}
-        />
-      </div>
-    </div>
-  );
+
+
+return (
+<div style={{ width: '100vw', height: '100vh' }}>
+<ReactFlow
+nodes={nodes}
+edges={edges}
+onNodesChange={onNodesChange}
+onEdgesChange={onEdgesChange}
+onConnect={onConnect}
+defaultViewport={defaultViewport}
+minZoom={0.2}
+maxZoom={4}
+attributionPosition="bottom-left"
+fitView
+fitViewOptions={{ padding: 0.5 }}
+onNodeClick={handleNodeClick}
+nodeTypes={{ resizable: ResizableNode }}
+>
+<Controls />
+<Toolbar setNodes={setNodes} />
+<Background variant="dots" gap={12} size={1} />
+<div className="add-node-button-container btn-add">
+<AddNode1 setNodes={setNodes} />
+</div>
+</ReactFlow>
+
+<div className="updatenode__controls">
+<input
+value={nodeName}
+onChange={(evt) => setNodeName(evt.target.value)}
+/>
+<input className='color-button'
+type="color"
+value={nodeBg}
+onChange={(evt) => setNodeBg(evt.target.value)}
+/>
+<div className="color-options">
+  <button className="color-button red" onClick={() => setNodeBg('#FFB3B3')} ></button>
+  <button className="color-button blue" onClick={() => setNodeBg('#B3C6FF')} ></button>
+  <button className="color-button yellow" onClick={() => setNodeBg('#FFFFB3')} ></button>
+  <button className="color-button gray" onClick={() => setNodeBg('#B3B3B3')} ></button>
+</div>
+
+</div>
+</div>
+);
 }

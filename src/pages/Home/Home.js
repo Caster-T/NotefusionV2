@@ -8,13 +8,23 @@ import Footer from "../../Components/Footer/Footer";
 import image from "../../assets/images/Tarjeta_1.png";
 import imagenHome from "../../assets/images/imagen1.png";
 import "./Home.css";
+import { useState } from "react";
 
 const Home = () => {
+const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+const handleLogin = () => {
+  setIsAuthenticated(true);
+};
+
   return (
     <>
       <nav>
-        <NavBar />
+        <NavBar isAuthenticated={isAuthenticated} />
       </nav>
+
+      <button className="prueba" onClick={handleLogin}>Simular Iniciar Sesión</button>
+
 
       <div className="grid-container">
         <div className="image">
@@ -61,9 +71,7 @@ const Home = () => {
         />
       </div>
 
-      <footer className="footer">
         <Footer />
-      </footer>
     </>
   );
 };
