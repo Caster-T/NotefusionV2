@@ -6,6 +6,8 @@ import Header from "./Header";
 import ButtonGroup from "./ButtonGroup";
 import Footer from "../../Components/Footer/Footer";
 import image from "../../assets/images/Tarjeta_1.png";
+import image2 from "../../assets/images/Tarjeta_2.png";
+import image3 from "../../assets/images/Tarjeta_3.png";
 import imagenHome from "../../assets/images/imagen1.png";
 import "./Home.css";
 import { useState } from "react";
@@ -54,7 +56,7 @@ const handleLogin = () => {
           invertido={true}
         />
         <Seccion
-          imagen={image}
+          imagen={image2}
           texto="Personaliza cada nodo del roadmap modificando su tamaño y color según tus preferencias. Esta flexibilidad permite resaltar las fases más importantes o diferenciarlas visualmente. "
           invertido={false}
         />
@@ -64,16 +66,14 @@ const handleLogin = () => {
           invertido={true}
         /> */}
         <Seccion
-          imagen={image}
+          imagen={image3}
           texto="Cada proyecto puede ser completamente personalizado con descripciones detalladas, objetivos específicos y titulos clave. 
           Esto te permite definir claramente el alcance y los resultados esperados, asegurando que estés alineado."
           invertido={true}
         />
       </div>
 
-      <footer className="footer">
         <Footer />
-      </footer>
     </>
   );
 };

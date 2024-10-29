@@ -32,8 +32,11 @@ function App() {
         <Route path="*" element={<NotFound />} />
 
         <Route path="/perfil" element={<Perfil />} />
-        <Route path="*" eluement={<NotFound />} />
 
+        <Route path="*" element={<NotFound />} />
+
+        <Route path="*" eluement={<NotFound />} />
+        
       </Routes>
     </>
   );

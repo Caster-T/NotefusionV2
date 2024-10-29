@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import ResizableNodeSelected from './ResizableNode.js';
-
 let nodeId = 0;
 
 function Agregarnodo({ setNodes }) {
@@ -22,7 +21,7 @@ function Agregarnodo({ setNodes }) {
     }, [setNodes]);
 
     return (
-        <button onClick={onClick} className='btn-add'> + </button>
+        <button onClick={onClick} className='btn-add'>+</button>
     );
 }
 
