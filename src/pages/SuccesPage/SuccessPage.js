@@ -1,8 +1,8 @@
 // SuccessPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./SuccessPage.css"
-
+import LogoutButton from '../Logout/Logout'; // Importa LogoutButton
+import "./SuccessPage.css";
 
 function SuccessPage() {
   const navigate = useNavigate();
@@ -18,6 +18,7 @@ function SuccessPage() {
         <button className="success-button" onClick={handleGoHome}>
           Volver a la página principal
         </button>
+        <LogoutButton /> {/* Botón para cerrar sesión */}
       </div>
     </div>
   );
