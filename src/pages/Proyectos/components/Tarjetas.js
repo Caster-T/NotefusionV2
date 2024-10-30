@@ -1,7 +1,7 @@
 import React from 'react';
 import "./tarjetas.css";
 
-const Tarjetas = ({ titulo, descripcion, selected, onClick, onEdit }) => {
+const Tarjetas = ({ titulo, descripcion, selected, onClick, onEdit, onContinue }) => {
   return (
     <div 
       className={`ContainerTarjetas ${selected ? 'selected' : ''}`} 
@@ -14,7 +14,7 @@ const Tarjetas = ({ titulo, descripcion, selected, onClick, onEdit }) => {
         <p>{descripcion}</p>
       </div>
       <button className='editar-button' onClick={(e) => {e.stopPropagation(); onEdit();}}>Editar</button>
-      <button className="continue-button" onClick={(e) => e.stopPropagation() }>Continuar</button>
+      <button className="continue-button" onClick={(e) => {e.stopPropagation(); onContinue(titulo);}}>Continuar</button>
     </div>
   );
 };

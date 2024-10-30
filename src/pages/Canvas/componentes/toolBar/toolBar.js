@@ -8,7 +8,7 @@ const Toolbar = ({ setNodes }) => {
     return (
     <>
     <nav className="toolbar">
-        <h1 className="site-title">Proyecto por defecto</h1>
+        <h1 className="site-title">Holm es un tupido</h1>
         <div className="nav-items">
             <ul>
                 <Link to ="/proyectos">Proyectos</Link>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Canvas from './pages/Canvas/canvas';
 
@@ -21,7 +22,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Canvas" element={<Canvas />} />
+        <Route path="/Canvas/:titulo" element={<Canvas />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Success" element={<SuccessPage />} />
         
