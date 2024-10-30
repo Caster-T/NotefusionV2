@@ -1,86 +1,59 @@
-/* popup.css */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .popup {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    width: 400px; 
-    max-width: 90%; 
-    animation: fadeIn 0.3s; 
-  }
-  
-  .popup h2 {
-    margin: 0 0 15px;
-    font-size: 1.5em; 
-    color: #333; 
-  }
-  
-  .popup input {
-    display: block;
-    margin-bottom: 15px;
-    width: 100%;
-    padding: 10px; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-  }
-  
-  .popup input:focus {
-    border-color: #007bff; 
-    outline: none; 
-  }
-  
-  .popup button {
-    padding: 10px 15px; 
-    border: none;
-    border-radius: 5px; 
-    cursor: pointer;
-    transition: background-color 0.3s; 
-  }
-  
-  .popup button[type="submit"] {
-    background-color: #b4fd61; 
-    color: #333;
-  }
-  
-  .popup button[type="submit"]:hover {
-    background-color: #a4f843; 
-  }
-  
-  .popup button[type="button"] {
-    background-color: #fe5858; ; 
-    color: #333;
-  }
-  
-  .popup button[type="button"]:hover {
-    background-color: #ff4343;;
-  }
-  
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.popup {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative; /* Permite que los elementos hijos se posicionen de forma absoluta */
+  width: 400px; /* Ajusta el ancho del popup según tus necesidades */
+}
 
+.close-buttonPopup {
+  position: absolute; /* Posicionamiento absoluto para situar la X en la esquina */
+  top: 10px; /* Distancia desde la parte superior */
+  right: 10px; /* Distancia desde la derecha */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 2rem; /* Ajusta el tamaño de la X */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  color: #333; /* Color de la X */
+}
 
+.close-buttonPopup:hover {
+  color: red; /* Cambia el color al pasar el mouse */
+}
+
+.color-selector {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid transparent; /* Sin borde por defecto */
+  transition: border-color 0.3s; /* Suaviza el cambio de color del borde */
+  border: 3px solid rgb(155, 155, 155);
+}
+
+.color-circle :hover {
+  border: 2px solid rgb(0, 0, 0); /* Bordes en gris claro al hacer hover */
+}

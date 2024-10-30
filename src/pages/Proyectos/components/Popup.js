@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './popup.css';
 
-const Popup = ({ open, onClose, onAddCard, initialTitulo = '', initialDescripcion = '' }) => {
+const Popup = ({ open, onClose, onAddCard, initialTitulo = '', initialDescripcion = '', color, setColor }) => {
   const [titulo, setTitulo] = useState(initialTitulo);
   const [descripcion, setDescripcion] = useState(initialDescripcion);
 
@@ -15,6 +15,7 @@ const Popup = ({ open, onClose, onAddCard, initialTitulo = '', initialDescripcio
     onAddCard({ titulo, descripcion });
     setTitulo('');
     setDescripcion('');
+    setColor('#ffffff'); // Reiniciar color al cerrar el popup
     onClose();
   };
 
@@ -23,6 +24,7 @@ const Popup = ({ open, onClose, onAddCard, initialTitulo = '', initialDescripcio
   return (
     <div className="overlay">
       <div className="popup">
+        <button className="close-buttonPopup" onClick={onClose}>&times;</button>
         <h2>{initialTitulo ? 'Editar Proyecto' : 'Nuevo Proyecto'}</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -38,8 +40,23 @@ const Popup = ({ open, onClose, onAddCard, initialTitulo = '', initialDescripcio
             value={descripcion}
             onChange={(e) => setDescripcion(e.target.value)}
           />
+
+          {/* Sección para seleccionar color */}
+          <div className="color-selector">
+            <h3>Selecciona un color:</h3>
+            <div className="color-options">
+              {['#fff', '#fdffb6 ', '#caffbf ', '#9bf6ff ','#a0c4ff ' ].map((pastelColor) => (
+                <div
+                  key={pastelColor}
+                  className="color-circle"
+                  style={{ backgroundColor: pastelColor }}
+                  onClick={() => setColor(pastelColor)} // Actualizar color al hacer clic
+                />
+              ))}
+            </div>
+          </div>
+
           <button type="submit">{initialTitulo ? 'Guardar Cambios' : 'Agregar'}</button>
-          <button type="button" onClick={onClose}>Cerrar</button>
         </form>
       </div>
     </div>

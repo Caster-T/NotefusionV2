@@ -1,82 +1,205 @@
 /* Navbar */
 .navbar-proy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff; /* Fondo blanco */
-    padding: 15px 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .site-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333; /* Color gris oscuro */
-  }
-  
-  .navbar-actions {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-input {
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    margin-right: 15px;
-    width: 200px; 
-    transition: border-color 0.3s; 
-  }
-  
-  .search-input:focus {
-    border-color: #888;
-    outline: none; 
-  }
-  
-  .add-button,
-  .delete-button,
-  .continue-button{
-    padding: 10px 15px ;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px; 
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .editar-button{
-    padding: 10px 15px ;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px; 
-    margin-bottom: 10px;
+.site-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  margin-right: 15px;
+  width: 220px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  background-color: #f0f8ff;
+  outline: none;
+}
+
+.add-button,
+.delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-button {
+  background-color: #b2bec3;
+  color: #333;
+}
+
+.add-button:hover {
+  background-color: #7f8c8d;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Botones específicos dentro de tarjetas */
+.editar-button,
+.continue-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Estilo para botón "Editar" */
+.editar-button {
+  background-color: #384b69; /* Color de fondo oscuro */
+  color: #ffffff; /* Letras blancas */
+}
+
+.editar-button:hover {
+  background-color: #172a45; /* Color más claro para el hover */
+  transform: scale(1.05); /* Animación de aumento */
+}
+
+/* Estilo para botón "Continuar" */
+.continue-button {
+  background-color: #384b69; /* Color de fondo oscuro */
+  color: #ffffff; /* Letras blancas */
+}
+
+.continue-button:hover {
+  background-color: #172a45; /* Color más claro para el hover */
+  transform: scale(1.05); /* Animación de aumento */
+}
+
+/* Overlay for Popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  animation: fadeIn 0.3s;
+}
+
+/* Title styling */
+.popup h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Input styling */
+.popup input {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.popup input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botón de envío (Agregar) */
+.popup button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #233e69; /* Color de fondo oscuro */
+  color: #ffffff; /* Letras blancas */
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.popup button[type="submit"]:hover {
+  background-color: #172a45; /* Color un poco más claro para el hover */
+}
+
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.75rem; /* Aumento del tamaño de la X */
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  
-  .add-button,  
-  .continue-button,
-  .editar-button {
-    background-color: #41c3ff; 
-    color: #333; 
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .add-button:hover,
-  .continue-button:hover,
-  .editar-button:hover {
-    background-color: #3bb1e8; 
-  }
-  
-  .delete-button {
-    background-color: #fe5858; 
-    color: #333; 
-  }
-  
-  .delete-button:hover {
-    background-color: #ff4343; 
-  }
+}
