@@ -16,8 +16,8 @@ class NavBar extends React.Component {
               <Link to="/perfil">Perfil</Link>
             ) : (
               <>
-            <Link to ="/login" id="login">Iniciar Sesión</Link>
-            <Link to ="/Registrar">Registrarse</Link>
+            <Link to ="/login" id="login">Iniciar Sesión/Registrarse</Link>
+            
             </>
             )}
             <Link to= "/canvas">Canvas</Link>
