@@ -7,23 +7,24 @@ import "./proyecto.css";
 
 const Proyectos = () => {
   const [tarjetas, setTarjetas] = useState([
-    { titulo: "Proyecto por Defecto", descripcion: "Descripción del proyecto por defecto", selected: false }
+    { titulo: "Proyecto por Defecto", descripcion: "Descripción del proyecto por defecto", selected: false, color: '#aaaaa' } // Color por defecto
   ]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [editCardIndex, setEditCardIndex] = useState(null); // Índice de la tarjeta en edición
+  const [color, setColor] = useState('#ffffff'); // Estado para manejar el color
 
   const handleAddCard = (nuevaTarjeta) => {
     if (editCardIndex !== null) {
       // Si editamos una tarjeta existente
       const updatedTarjetas = tarjetas.map((tarjeta, index) =>
-        index === editCardIndex ? { ...nuevaTarjeta, selected: tarjeta.selected } : tarjeta
+        index === editCardIndex ? { ...nuevaTarjeta, selected: tarjeta.selected, color } : tarjeta // Usar el color seleccionado
       );
       setTarjetas(updatedTarjetas);
       setEditCardIndex(null); // Resetea el índice de edición
     } else {
       // Agregar una nueva tarjeta
-      setTarjetas([...tarjetas, { ...nuevaTarjeta, selected: false }]);
+      setTarjetas([...tarjetas, { ...nuevaTarjeta, selected: false, color }]); // Usar el color seleccionado
     }
   };
 
@@ -39,6 +40,7 @@ const Proyectos = () => {
 
   const handleEditCard = (index) => {
     setEditCardIndex(index);
+    setColor(tarjetas[index].color); // Al editar, se establece el color actual de la tarjeta
     setIsPopupOpen(true);
   };
 
@@ -52,37 +54,37 @@ const Proyectos = () => {
         searchQuery={searchQuery} 
         setSearchQuery={setSearchQuery} 
         onAddCard={() => {
-          setEditCardIndex(null); // Resetea el índice de edición cuando agregamos una nueva tarjeta
+          setEditCardIndex(null);
+          setColor('#ffffff'); // Reiniciar color al agregar nueva tarjeta
           setIsPopupOpen(true); 
         }}
         onDeleteCards={handleDeleteCards}
       />
       <div className='main'>
-      <Popup
-        open={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-        onAddCard={handleAddCard}
-        initialTitulo={editCardIndex !== null && tarjetas[editCardIndex] ? tarjetas[editCardIndex].titulo : ''}
-        initialDescripcion={editCardIndex !== null && tarjetas[editCardIndex] ? tarjetas[editCardIndex].descripcion : ''}
-      />
+        <Popup
+          open={isPopupOpen}
+          onClose={() => setIsPopupOpen(false)}
+          onAddCard={handleAddCard}
+          initialTitulo={editCardIndex !== null && tarjetas[editCardIndex] ? tarjetas[editCardIndex].titulo : ''}
+          initialDescripcion={editCardIndex !== null && tarjetas[editCardIndex] ? tarjetas[editCardIndex].descripcion : ''}
+          color={color} // Pasar el color seleccionado
+          setColor={setColor} // Pasar la función para actualizar el color
+        />
 
-
-      <div className="listaTarjetas">
-        {filteredTarjetas.map((tarjeta, index) => (
-          <Tarjetas
-            key={index}
-            titulo={tarjeta.titulo}
-            descripcion={tarjeta.descripcion}
-            selected={tarjeta.selected}
-            onClick={() => toggleSelectCard(index)}
-            onEdit={() => handleEditCard(index)}
-          />
-        ))}
+        <div className="listaTarjetas">
+          {filteredTarjetas.map((tarjeta, index) => (
+            <Tarjetas
+              key={index}
+              titulo={tarjeta.titulo}
+              descripcion={tarjeta.descripcion}
+              selected={tarjeta.selected}
+              onClick={() => toggleSelectCard(index)}
+              onEdit={() => handleEditCard(index)}
+              color={tarjeta.color} // Usar el color de cada tarjeta
+            />
+          ))}
+        </div>
       </div>
-      </div>
-      
-      <Footer />
-      
     </div>
   );
 };

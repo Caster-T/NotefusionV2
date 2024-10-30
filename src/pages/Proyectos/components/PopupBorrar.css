@@ -1,0 +1,75 @@
+/* popupBorrar.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  animation: fadeIn 0.3s ease;
+  text-align: center;
+}
+
+.popup-content h3 {
+  margin: 20px 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.confirm-button-large {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #d9534f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-button-large:hover {
+  background-color: #c9302c;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #aaa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
