@@ -16,36 +16,41 @@ const Proyectos = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Cargar proyectos desde localStorage
     const storedProjects = JSON.parse(localStorage.getItem('projects')) || [];
     setTarjetas(storedProjects);
   }, []);
 
   const handleContinue = (titulo) => {
-    navigate(`/canvas/${titulo}`); // Redirigir al canvas con el título
+    navigate(`/canvas/${titulo}`);
   };
 
   const handleAddCard = (nuevaTarjeta) => {
     let updatedTarjetas;
   
     if (editCardIndex !== null) {
-      // Si editamos una tarjeta existente
       updatedTarjetas = tarjetas.map((tarjeta, index) =>
         index === editCardIndex ? { ...nuevaTarjeta, selected: tarjeta.selected, color } : tarjeta
       );
-      setEditCardIndex(null); // Resetea el índice de edición
+      setEditCardIndex(null);
     } else {
-      // Agregar una nueva tarjeta
-      updatedTarjetas = [...tarjetas, { ...nuevaTarjeta, selected: false, color }]; // Usar el color seleccionado
+      updatedTarjetas = [...tarjetas, { ...nuevaTarjeta, selected: false, color }]; 
     }
   
     setTarjetas(updatedTarjetas);
-    localStorage.setItem('projects', JSON.stringify(updatedTarjetas)); // Guardar en localStorage
-    setIsPopupOpen(false); // Cerrar el popup después de añadir
+    localStorage.setItem('projects', JSON.stringify(updatedTarjetas));
+    setIsPopupOpen(false);
   };
 
   const handleDeleteCards = () => {
-    setTarjetas(tarjetas.filter((tarjeta) => !tarjeta.selected));
+    const updatedTarjetas = tarjetas.filter((tarjeta) => {
+      if (tarjeta.selected) {
+        localStorage.removeItem(tarjeta.titulo); 
+      }
+      return !tarjeta.selected;
+    });
+  
+    setTarjetas(updatedTarjetas);
+    localStorage.setItem('projects', JSON.stringify(updatedTarjetas));
   };
 
   const toggleSelectCard = (index) => {
@@ -56,7 +61,7 @@ const Proyectos = () => {
 
   const handleEditCard = (index) => {
     setEditCardIndex(index);
-    setColor(tarjetas[index].color); // Al editar, se establece el color actual de la tarjeta
+    setColor(tarjetas[index].color);
     setIsPopupOpen(true);
 
   };
@@ -72,7 +77,7 @@ const Proyectos = () => {
         setSearchQuery={setSearchQuery} 
         onAddCard={() => {
           setEditCardIndex(null);
-          setColor('#ffffff'); // Reiniciar color al agregar nueva tarjeta
+          setColor('#ffffff');
           setIsPopupOpen(true); 
         }}
         onDeleteCards={handleDeleteCards}

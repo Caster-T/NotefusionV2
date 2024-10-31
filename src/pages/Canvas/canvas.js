@@ -59,8 +59,7 @@ export default function Canvas() {
       nodes,
       edges,
     };
-    localStorage.setItem(titulo, JSON.stringify(canvasData)); // Guardar usando el título correcto
-    alert(`Canvas guardado como: ${titulo}`); // Mostrar el título correcto
+    localStorage.setItem(titulo, JSON.stringify(canvasData));
   };
 
   useEffect(() => {
@@ -90,7 +89,7 @@ export default function Canvas() {
         nodeTypes={{ resizable: ResizableNode }}
       >
         <Controls />
-        <Toolbar setNodes={setNodes} />
+        <Toolbar setNodes={setNodes} onSaveCanvas={saveCanvas}  />
         <Background variant="dots" gap={12} size={1} />
         <div className="add-node-button-container btn-add">
           <AddNode1 setNodes={setNodes} />
@@ -114,7 +113,6 @@ export default function Canvas() {
           <button className="color-button yellow" onClick={() => setNodeBg('#FFFFB3')}></button>
           <button className="color-button gray" onClick={() => setNodeBg('#B3B3B3')}></button>
         </div>
-        <button onClick={saveCanvas} style={{ marginTop: '10px' }}>Guardar Canvas</button>
       </div>
     </div>
   );
