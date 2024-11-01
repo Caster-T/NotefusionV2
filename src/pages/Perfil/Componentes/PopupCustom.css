@@ -14,23 +14,23 @@
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
-    position: relative; /* Permite que los elementos hijos se posicionen de forma absoluta */
-    width: 400px; /* Ajusta el ancho del popup según tus necesidades */
+    position: relative;
+    width: 400px;
   }
   
   .close-buttonPopup {
-    position: absolute; /* Posicionamiento absoluto para situar la X en la esquina */
-    top: 10px; /* Distancia desde la parte superior */
-    right: 10px; /* Distancia desde la derecha */
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    font-size: 2rem; /* Ajusta el tamaño de la X */
-    cursor: pointer; /* Cambia el cursor a pointer */
-    color: #333; /* Color de la X */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
   }
   
   .close-buttonPopup:hover {
-    color: red; /* Cambia el color al pasar el mouse */
+    color: red;
   }
   
   .color-selector {
@@ -49,12 +49,11 @@
     border-radius: 50%;
     margin: 0 10px;
     cursor: pointer;
-    border: 2px solid transparent; /* Sin borde por defecto */
-    transition: border-color 0.3s; /* Suaviza el cambio de color del borde */
     border: 3px solid rgb(155, 155, 155);
+    transition: border-color 0.3s;
   }
   
-  .color-circle :hover {
-    border: 2px solid rgb(0, 0, 0); /* Bordes en gris claro al hacer hover */
+  .color-circle:hover {
+    border: 2px solid rgb(0, 0, 0);
   }
   

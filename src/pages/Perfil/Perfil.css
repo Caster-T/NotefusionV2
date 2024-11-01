@@ -1,14 +1,12 @@
-/* Estructura general de la página */
 .perfil-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   padding-top: 80px;
-  background-color: #fff; /* Fondo blanco */
+  background-color: #fff;
 }
 
-/* Contenedor principal de perfil */
 .perfil-container {
   display: flex;
   justify-content: center;
@@ -22,33 +20,29 @@
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   align-items: center;
-  /* background-color: #f0f0f0; */
   padding: 20px;
-  /* border: 1px solid #ddd; */
   width: 70%;
 }
 
-/* Contenedor de la imagen de perfil */
 .profile-picture-container {
-  width: 300px; /* Ancho fijo del contenedor */
-  height: 300px; /* Altura fija del contenedor */
-  overflow: hidden; /* Oculta el exceso de imagen */
-  border-radius: 50%; /* Hace que la imagen sea circular */
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .profile-picture {
-  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-  height: 100%; /* La imagen ocupará toda la altura del contenedor */
-  object-fit: cover; /* La imagen se recortará y ajustará para cubrir el contenedor */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Información del perfil */
 .profile-info {
   text-align: left;
-  color: #333; /* Texto oscuro */
+  color: #333;
 }
 
 .user-name {
@@ -62,26 +56,23 @@
 }
 
 .edit-description {
-  background-color: #e0e0e0; /* Fondo gris claro */
-  color: #333; /* Texto oscuro */
+  background-color: #e0e0e0;
+  color: #333;
   border: none;
   padding: 8px 12px;
   cursor: pointer;
   margin-top: 10px;
-  
 }
 
 .logout-button {
   margin-top: 20px;
-  background-color: #e0e0e0; /* Fondo gris claro */
-  color: #333; /* Texto oscuro */
+  background-color: #e0e0e0;
+  color: #333;
   border: none;
   padding: 8px 12px;
   cursor: pointer;
 }
 
-/*hover fachero*/
-/* Efecto hover en el nombre del usuario */
 .user-name {
   font-size: 24px;
   font-weight: bold;
@@ -105,21 +96,16 @@
 .user-name:hover::before {
   transform: scaleX(1);
 }
-/* .jobs li:hover{
-  background-color: #2196F3;
-} */
 
-
-/*Grid para acomodar el nav, main y footer*/
 .containerProyect {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Navbar, Main y Footer */
-  min-height: 100dvh; /* Asegura que el contenedor ocupe el 100% del viewport */
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
 }
 
 .main {
-  min-height: 90dvh; /* Ocupa el 100% de la altura de la ventana */
-  overflow-y: auto; /* Habilita el scroll si el contenido es demasiado grande */
+  min-height: 90dvh;
+  overflow-y: auto;
 }
 
 .upload-button {

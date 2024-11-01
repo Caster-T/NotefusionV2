@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Perfil.css";
 import Footer from "../../Components/Footer/Footer";
 import NavBar from "../../Components/NavBar/Navbar";
 import Popup from "./Componentes/PopupCustom";
 import placeholderPFP from "./Componentes/placeholderPFP.png";
+import { createClient } from '@supabase/supabase-js';
 import { useAuth } from '../SuccesPage/Context/AuthContext';
 
+const supabase = createClient(
+  "https://pupykdosdzzurbezcovq.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1cHlrZG9zZHp6dXJiZXpjb3ZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAwNTA0MDUsImV4cCI6MjA0NTYyNjQwNX0.UdaegPhGjaxAJk34CbdHMqDo5UPHAEKrjkayp3o7mLY"
+);
+
 const Perfil = () => {
-  const { isAuthenticated, logout } = useAuth();
+  const { logout } = useAuth();
+  const navigate = useNavigate();
   const [userName, setUserName] = useState("Usuario");
   const [userDescription, setUserDescription] = useState("Hola, soy nuevo aca");
   const [profileImage, setProfileImage] = useState(placeholderPFP);
@@ -45,13 +53,13 @@ const Perfil = () => {
     }
   };
 
-  const handleLogout = () => {
-    // Eliminar datos del localStorage
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    logout();
     localStorage.removeItem("userName");
     localStorage.removeItem("userDescription");
     localStorage.removeItem("profileImage");
-    // Cerrar sesión
-    logout();
+    navigate('/');
   };
 
   return (
@@ -94,8 +102,6 @@ const Perfil = () => {
         </div>
       </div>
       <Footer />
-      
-      {/* Popup para editar nombre y descripción */}
       <Popup
         open={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}

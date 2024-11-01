@@ -13,11 +13,11 @@ const Popup = ({ open, onClose, onSubmit, initialTitulo = '', initialNombre = ''
   const handleSubmit = (e) => {
     e.preventDefault();
     if (typeof onSubmit === 'function') {
-      onSubmit({ nombre, descripcion }); // Pasar nombre y descripción
+      onSubmit({ nombre, descripcion });
     }
-    setNombre(''); // Limpiar nombre
-    setDescripcion(''); // Limpiar descripción
-    onClose(); // Cerrar el popup
+    setNombre('');
+    setDescripcion('');
+    onClose();
   };
 
   if (!open) return null;
@@ -34,14 +34,14 @@ const Popup = ({ open, onClose, onSubmit, initialTitulo = '', initialNombre = ''
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
             required
-            maxLength={20} // Limite de caracteres para el nombre
+            maxLength={20}
           />
           <input
             type="text"
             placeholder="Descripción"
             value={descripcion}
             onChange={(e) => setDescripcion(e.target.value)}
-            maxLength={200} // Limite de caracteres para la descripción
+            maxLength={200}
           />
           <button type="submit">Guardar Cambios</button>
         </form>
