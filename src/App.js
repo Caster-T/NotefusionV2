@@ -10,7 +10,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import NotFound from './pages/NotFound/NotFound';
 import Proyectos from './pages/Proyectos/proyectos';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import { AuthProvider } from '../src/pages/SuccesPage/Context/AuthContext';
 import SuccessPage from './pages/SuccesPage/SuccessPage';
 
 import Perfil from './pages/Perfil/Perfil'
@@ -20,6 +20,7 @@ import Perfil from './pages/Perfil/Perfil'
 function App() {
   return (
     <>
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Canvas/:titulo" element={<Canvas />} />
@@ -39,6 +40,7 @@ function App() {
         <Route path="*" eluement={<NotFound />} />
         
       </Routes>
+      </AuthProvider>
     </>
   );
 }

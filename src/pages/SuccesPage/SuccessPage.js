@@ -1,13 +1,15 @@
 // SuccessPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./SuccessPage.css"
-
+import { useAuth } from './Context/AuthContext';
+import "./SuccessPage.css";
 
 function SuccessPage() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleGoHome = () => {
+    login(); // Cambia el estado a autenticado
     navigate('/');
   };
 

@@ -13,21 +13,12 @@ import "./Home.css";
 import { useState } from "react";
 
 const Home = () => {
-const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-const handleLogin = () => {
-  setIsAuthenticated(true);
-};
 
   return (
     <>
       <nav>
-        <NavBar isAuthenticated={isAuthenticated} />
+        <NavBar/>
       </nav>
-
-      <button className="prueba" onClick={handleLogin}>Simular Iniciar Sesión</button>
-
-
       <div className="grid-container">
         <div className="image">
           <ImageAText img={imagenHome} />
