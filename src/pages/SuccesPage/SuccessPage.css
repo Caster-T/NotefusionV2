@@ -1,30 +1,30 @@
 .text-content button {
-    background-color: #7b7df7;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .text-content button:hover {
-    background-color: #6366f1;
-  }
+  background-color: #7b7df7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  /* login.css */
+.text-content button:hover {
+  background-color: #6366f1;
+}
+
+/* login.css */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Hace que ocupe toda la altura de la ventana */
-  background-color: #f5f5f5; /* Color de fondo opcional */
+  background-color: #f5f5f5; 
 }
 
 .auth-box {
   width: 100%;
-  max-width: 400px; /* Ajusta el tamaño máximo del recuadro */
+  max-width: 400px; 
   padding: 20px;
   background-color: white;
   border-radius: 8px;
@@ -32,12 +32,12 @@
 }
 
 .auth-box .supabase-auth-button {
-  width: 100%; /* Ajusta el ancho del botón al recuadro */
+  width: 100%; 
   margin-top: 10px;
 }
 
 .auth-box input {
-  width: 100%; /* Ajusta el ancho de los campos de texto */
+  width: 100%; 
 }
 
 .auth-box .supabase-auth-label {
@@ -45,19 +45,48 @@
   font-size: 14px;
 }
 
-  
 .success-button {
-    background-color: hsl(153, 60%, 53%);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 20px;
-  }
-  
-  .success-button:hover {
-    background-color: hsl(154, 54.8%, 45.1%);
-  }
-  
+  background-color: hsl(153, 60%, 53%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.success-button:hover {
+  background-color: hsl(154, 54.8%, 45.1%);
+}
+
+.logout-button {
+  background-color: #dc3545; /* Color rojo para el botón de cerrar sesión */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px; /* Espacio entre el botón de volver y cerrar sesión */
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.return-button {
+  background-color: #17a2b8; /* Color verde agua */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px; /* Espacio entre el botón de volver y cerrar sesión */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.return-button:hover {
+  background-color: #138496; /* Color más oscuro para el efecto hover */
+}
