@@ -2,18 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./Perfil.css";
 import Footer from "../../Components/Footer/Footer";
 import NavBar from "../../Components/NavBar/Navbar";
-import LogoutButton from "./Componentes/Logoutbutton";
 import Popup from "./Componentes/PopupCustom";
 import placeholderPFP from "./Componentes/placeholderPFP.png";
-import { useAuth } from '../SuccesPage/Context/AuthContext'; // Importar el contexto
+import { useAuth } from '../SuccesPage/Context/AuthContext';
 
 const Perfil = () => {
   const { isAuthenticated, logout } = useAuth();
   const [userName, setUserName] = useState("Usuario");
-  const [userDescription, setUserDescription] = useState(
-    "Hola, soy nuevo aca"
-  );
-
+  const [userDescription, setUserDescription] = useState("Hola, soy nuevo aca");
   const [profileImage, setProfileImage] = useState(placeholderPFP);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -49,6 +45,15 @@ const Perfil = () => {
     }
   };
 
+  const handleLogout = () => {
+    // Eliminar datos del localStorage
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userDescription");
+    localStorage.removeItem("profileImage");
+    // Cerrar sesión
+    logout();
+  };
+
   return (
     <div className="containerProyect">
       <NavBar />
@@ -80,7 +85,9 @@ const Perfil = () => {
                 >
                   Modificar Perfil
                 </button>
-                <button className="edit-description" onClick={logout}>Cerrar Sesión</button> 
+                <button className="logout-button" onClick={handleLogout}>
+                  Cerrar sesión
+                </button>
               </div>
             </div>
           </div>
